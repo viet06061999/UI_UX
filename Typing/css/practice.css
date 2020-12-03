@@ -16,6 +16,10 @@ a:hover{
 #practiceCategory{
 	color: grey !important;
 }
+
+#currentLesson{
+	color: #46A3C1
+}
 #e7_12 { 
 	overflow:hidden;
 	opacity:1;
