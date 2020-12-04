@@ -1,0 +1,75 @@
+#game {
+    position: relative;
+    max-width: 960px;
+    max-height: 712px;
+}
+
+.play {
+    width: 960px;
+    height: 712px;
+    position: absolute;
+    top: 0;
+    color: darkred;
+    /* font: italic small-caps bold 16px/2 cursive; */
+    font-size: 20px;
+    font-weight: 900;
+    font-family: 'OCR A Std', monospace;
+}
+
+#playBtn {
+    margin-bottom: 50px;
+    margin-top: 300px;
+    margin-left: 50px;
+}
+
+#topScoreBtn {
+    margin-top: 10px;
+    margin-left: 50px;
+}
+
+#nameInput {
+    font-size: xx-large;
+    font-weight: bolder;
+    width: 300px;
+    height: 70px;
+    border-radius: 10%;
+    margin-top: 250px;
+    margin-left: 330px;
+}
+
+#startBtnReal {
+    border-radius: 20%;
+    margin-top: 10px;
+    margin-left: 430px;
+}
+
+
+#wordsWrap {
+    margin-top: 80px;
+    margin-left: 350px;
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.bg {
+	background-color: #04AF71;
+}
+
+#frameImg {
+    position: absolute;
+    top: 0;
+}
+
+#backBtn {
+    position: absolute;
+    top: 2;
+    margin-top: 500px;
+    margin-left: 450px;
+}
+
+#topList {
+    position: absolute;
+    top: 1;
+    margin-top: 200px;
+    margin-left: 200px;
+}

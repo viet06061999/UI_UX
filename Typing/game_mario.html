@@ -9,18 +9,17 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>UX-UI</title>
+    <title>Game</title>
 
     <!-- Custom fonts for this template-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
-    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> -->
     <link
         href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
         rel="stylesheet">
 
-    <!-- Custom styles for this template-->
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
+    <link href="game/game.css" rel="stylesheet">
 
 </head>
 
@@ -58,14 +57,6 @@
                     <i class="fas fa-fw fa-cog"></i>
                     <span>Bộ quy tắc</span>
                 </a>
-                <!-- <div id="collapseBoquytac" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Bộ quy tắc:</h6>
-                        <a class="collapse-item" href="#">Âm đầu</a>
-                        <a class="collapse-item" href="#">Âm chính</a>
-                        <a class="collapse-item" href="#">Âm cuối</a>
-                    </div>
-                </div> -->
             </li>
         
             <li class="nav-item">
@@ -336,15 +327,77 @@
 
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
-
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-0 text-gray-800">Game</h1>
+                        <h1 class="h3 mb-0 text-gray-800"><b>Game</b></h1>
+                    </div>
+
+                    <div id="game">
+                        <div id="videoDiv">
+                            <video autoplay muted loop style="border-radius: 5%;" id="initVideo">
+                                <source id="video" src="game/video/start_0.mp4" type="video/mp4">
+                             </video>
+                        </div>
+                        <div class="play">
+                            <img id="frameImg" src="game/frame.png" style="display: none;">
+                            <div class="row">
+                                <button id="backBtn" style="display: none;" class="btn btn-primary" > Back</button>     
+                            </div>
+                            <div class="row" id="topList"></div>
+                            <div class="row mt-3">
+                                <div class="col-1"></div>
+                                <div class="col-2" id="scoreWrap">
+                                    <span>Score:</span>
+                                    <span id="score">0</span>
+                                    <span id="scoreChange"></span>
+                                </div>
+    
+                                <div class="col-3" id="timeWrap">
+                                    <span>Time left:</span>
+                                    <span id="time">60</span>
+                                </div>
+
+                                <div class="col-2" id="wordCountWrap">
+                                    <span>Words:</span>
+                                    <span id="wordCount">0</span>
+                                </div>
+
+                                <div class="col-4" id="mistakeCountWrap">
+                                    <span>Mistake:</span>
+                                    <span id="mistakeCount">0</span>
+                                </div>
+                            </div>
+                            
+
+                            <div id="wordsWrap">
+                                <p id="words"></p>
+                            </div>
+
+                            <input id="nameInput" style="display: none;" placeholder="Your name..." type="text" style="border-radius: 3%;">
+
+                            <button id="startBtnReal" style="display: none;" class="btn btn-primary" > Start</button>
+
+                            <div id="menuHome">
+                                <div class="row">
+                                    <button id="playBtn" class="btn btn-success" > Play</button>
+                                </div>
+                                <div class="row">
+                                    <button id="topScoreBtn" class="btn btn-success" > Top Score</button>     
+                                </div>
+
+                            </div>
+
+                            
+                            
+
+                           
+
+                            
+                            
+                        </div>
+                    </div>
                         
-                    </div>
-                    <div class="row">
-                        <img width="1000" src="game_mario.png"/>
-                    </div>
+                    
 
 
                         
@@ -410,8 +463,9 @@
     <script src="vendor/chart.js/Chart.min.js"></script>
 
     <!-- Page level custom scripts -->
-    <script src="js/demo/chart-area-demo.js"></script>
-    <script src="js/demo/chart-pie-demo.js"></script>
+    <!-- <script src="js/demo/chart-area-demo.js"></script>
+    <script src="js/demo/chart-pie-demo.js"></script> -->
+    <script src="game/game.js"></script>
 
 </body>
 
