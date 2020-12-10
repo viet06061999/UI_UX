@@ -1,16 +1,13 @@
 .simple-keyboard {
-    width:400px;
-}
-
-#keyboardWrapper{
-    display: flex;
-    flex-direction: row;
+    width: 700px !important;
+    margin: auto;
 }
 
 #stenoKeyboard{
-    width: 550px;
-    margin-left: 20px;
-    height: 150px;
     background-image: url("../img/images/steno.png");
     background-size: cover;
+    width: 500px;
+    margin: auto;
+    height: 220px;
+    margin-top: 50px;
 }
