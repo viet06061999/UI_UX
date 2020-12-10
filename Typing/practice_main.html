@@ -395,7 +395,7 @@
                                 Hãy đánh lại ký tự sau &nbsp; &nbsp;&nbsp;
                             </h3>
                             <div class="d-flex align-items-center" style="margin-top: 0px">
-                                <h1 style="font-size: 7rem; color: #46a3c1">&nbsp;B</h1>
+                                <h1 id="practiceWord" style="font-size: 7rem; color: #46a3c1">&nbsp;B</h1>
                                 <div class="d-flex justify-content-center align-items-center" style="
                       margin-left: 16px;
                       border-radius: 20px;
@@ -448,12 +448,12 @@
                 <div class="container my-auto">
                     <div class="row" style="margin-top: 35px">
                         <div class="col d-flex justify-content-center align-items-center">
-                            <button class="btn btn-primary" type="button"
+                            <button onclick="nextWord()" class="btn btn-primary" type="button"
                                 style="background-color: #e5e5e5; color: #46a3c1">
                                 <strong>Ký tự tiếp theo</strong>
                             </button>
                         </div>
-                        <div class="col d-flex justify-content-center align-items-center">
+                        <div id='keyboardToggle' class="col d-flex justify-content-center align-items-center">
                             <i class="fas fa-keyboard" style="font-size: 27px; color: rgb(65, 65, 65)"></i>
                             <p style="
                     margin-left: 5px;
@@ -461,7 +461,7 @@
                     font-size: 14px;
                     color: rgb(86, 86, 86);
                   ">
-                                <strong>Hiện bàn phím</strong>
+                                <button onclick="hide()" id='keyboardToggle'>Hiện bàn phím</button>
                             </p>
                         </div>
                         <div class="col d-flex justify-content-center align-items-center">
@@ -474,7 +474,8 @@
                             </p>
                             <i class="fa fa-clock-o"></i>
                             <p style="margin-bottom: 0; margin-left: 6px; font-size: 24px">
-                                <strong>00:32:10</strong>
+                                <strong><label id="minutes">00</label>:<label id="seconds">00</label>
+                                </strong>
                             </p>
                         </div>
                     </div>
@@ -509,6 +510,7 @@
     <!-- Simple keyboard  -->
     <script src="https://cdn.jsdelivr.net/npm/simple-keyboard@latest/build/index.js"></script>
     <script src="js/simple_keyboard.js"></script>
+    <script src="../Typing/js/practice_main.js"></script>
 </body>
 
 </html>
