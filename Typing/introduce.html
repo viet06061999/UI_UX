@@ -10,11 +10,13 @@
     <meta name="author" content="">
 
     <title>UX-UI</title>
-
+    <link href="css/sb-admin-2.min.css" rel="stylesheet" />
+    <link href="css/introduce.css" rel="stylesheet" />
     <!-- Custom fonts for this template-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simple-keyboard@latest/build/css/index.css" />
 
     <!-- Custom styles for this template-->
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
@@ -330,17 +332,11 @@
                                 <h6 style="padding: 10px;" class="m-0 font-weight-bold text-primary">Giới thiệu bộ bàn phím</h6>
                                 <a href="rule.html" role="button" class="btn btn-primary">Next</a>
                             </div>
-                            <div class="card-body" style="text-align: center;">
-                                <div>
-                                    <span style="color: black">Bàn phím qwerty</span>
-                                    <div><img style="margin-top: 30px;" src="./img/qwerty.png" alt=""></div>
+                            <div class="card-body" >
+                                <div id="keyboardWrapper">
+                                    <div class="simple-keyboard"></div>
+                                    <div id="stenoKeyboard"></div>
                                 </div>
-
-                                <div style="margin-top: 15px;">
-                                    <span style="color: black;">Bàn phím tốc ký</span>
-                                    <div><img style="margin-top: 30px;" src="./img/steno.png" alt=""></div>
-                                </div>
-
                             </div>
                         </div>
 
@@ -390,6 +386,24 @@
 
     <!-- Page level custom scripts -->
     <script src="js/demo/chart-area-demo.js"></script>
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="js/sb-admin-2.min.js"></script>
+
+    <!-- Page level plugins -->
+    <script src="vendor/chart.js/Chart.min.js"></script>
+
+    <!-- Page level custom scripts -->
+    <script src="js/demo/chart-area-demo.js"></script>
+
+    <!-- Simple keyboard  -->
+    <script src="https://cdn.jsdelivr.net/npm/simple-keyboard@latest/build/index.js"></script>
+    <script src="js/simple_keyboard.js"></script>
 
 </body>
 
