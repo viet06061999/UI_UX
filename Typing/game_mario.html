@@ -197,65 +197,112 @@
                         <div class="play">
                             <img id="frameImg" src="game/frame.png" style="display: none;">
                             <div class="row">
-                                <button id="backBtn" style="display: none;" class="btn btn-primary" > Back</button>     
+                                <button id="backBtn" style="display: none;" class="btn btn-primary btn-main" > Back</button>     
                             </div>
                             <div class="row" id="topList"></div>
-                            <div class="row mt-3">
+                            <div class="row mt-3" style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; font-size: 30px;">
                                 <div class="col-1"></div>
                                 <div class="col-2" id="scoreWrap">
-                                    <span>Score:</span>
+                                    <span>Điểm:</span>
                                     <span id="score">0</span>
                                     <span id="scoreChange"></span>
                                 </div>
     
                                 <div class="col-3" id="timeWrap">
-                                    <span>Time left:</span>
+                                    <span>Thời gian:</span>
                                     <span id="time">60</span>
                                 </div>
 
                                 <div class="col-2" id="wordCountWrap">
-                                    <span>Words:</span>
+                                    <span>Từ:</span>
                                     <span id="wordCount">0</span>
                                 </div>
 
-                                <div class="col-4" id="mistakeCountWrap">
-                                    <span>Mistake:</span>
+                                <div class="col-2" id="mistakeCountWrap">
+                                    <span>Sai:</span>
                                     <span id="mistakeCount">0</span>
                                 </div>
+                                <div class="col-2">
+                                    <button id="exitBtn" class="btn btn-dark" style=" display: none;"><i class="fas fa-sign-out-alt"></i> Thoát</button>
+                                </div>
                             </div>
-                            
 
                             <div id="wordsWrap">
                                 <p id="words"></p>
                             </div>
 
-                            <input id="nameInput" style="display: none;" placeholder="Your name..." type="text" style="border-radius: 3%;">
+                            <table class="table gameHelp" id="gameHelpTable" style="display: none;">
+                                <thead>
+                                    <tr>
+                                        <th scope="col"></th>
+                                        <th scope="col">Âm đầu</th>
+                                        <th scope="col">Âm chính</th>
+                                        <th scope="col">Âm cuối</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">Từ</th>
+                                        <td id="cell11"></td>
+                                        <td id="cell12"></td>
+                                        <td id="cell13"></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Steno</th>
+                                        <td id="cell21"></td>
+                                        <td id="cell22"></td>
+                                        <td id="cell23"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <button class="btn btn-primary gameHelp" id="gameHelpBtn" style="display: none;"><i class="fas fa-poo"></i> Không làm mà đòi có ăn</button>
+                            
 
-                            <button id="startBtnReal" style="display: none;" class="btn btn-primary" > Start</button>
-
-                            <div id="menuHome">
-                                <div class="row">
-                                    <button id="playBtn" class="btn btn-success" > Play</button>
+                            <div id="game_option" style="display: none;">
+                                <h3 id="game_option_label">Chọn chế độ chơi</h3>
+                                <div class="radiobtn">
+                                    <input type="radio" id="huey" name="drone" value="1" />
+                                    <label for="huey">Gõ số - ký tự</label>
                                 </div>
-                                <div class="row">
-                                    <button id="topScoreBtn" class="btn btn-success" > Top Score</button>     
+                                
+                                <div class="radiobtn">
+                                    <input type="radio" id="dewey" name="drone" value="2" checked />
+                                    <label for="dewey">Gõ âm</label>
+                                </div>
+                                
+                                <div class="radiobtn">
+                                    <input type="radio" id="louie" name="drone" value="3" />
+                                    <label for="louie">Gõ từ</label>
                                 </div>
 
+                                <input id="nameInput" style="display: block;" placeholder="  Nhập tên" type="text" style="border: none; border-radius: 3%;">
+
+                                <button id="startBtnReal" style="display: block;" class="btn btn-primary" > CHƠI</button>
                             </div>
 
                             
-                            
 
-                           
+                            <div id="menuHome">
+                                <div class="row">
+                                    <button id="playBtn" class="btn btn-primary btn-menu btn-main-game"> BẮT ĐẦU</button>
+                                </div>
 
-                            
+                                <div class="row">
+                                    <button id="topScoreBtn" class="btn btn-primary btn-menu"> Người chơi hệ điểm</button>     
+                                </div>
+
+                                <div class="row">
+                                    <button id="topWordBtn" class="btn btn-primary btn-menu"> Tay nhanh hơn não</button>     
+                                </div>
+
+                                <div class="row">
+                                    <button id="topMissBtn" class="btn btn-primary btn-menu"> Học sinh bàn cuối</button>     
+                                </div>
+
+                            </div>
                             
                         </div>
                     </div>
-                        
-                    
-
-
                         
 
                 </div>
