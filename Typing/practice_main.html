@@ -23,6 +23,21 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simple-keyboard@latest/build/css/index.css" />
     <link href="css/keyboard.css" rel="stylesheet" />
     <style>
+        #myProgress {
+            width: 100%;
+            background-color: #ddd;
+            border-radius: 30px;
+        }
+
+        #myBar {
+            width: 0%;
+            height: 30px;
+            background-color: #4CAF50;
+            text-align: center;
+            line-height: 30px;
+            color: white;
+            border-radius: 30px;
+        }
         div.ex1 {
             margin-left: 30px;
         }
@@ -386,8 +401,9 @@
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col d-flex flex-column justify-content-center align-items-center">
-                            <img src="./img/images/Group%2038.png" /><img src="./img/images/Group%2043.svg"
-                                style="width: 52px" />
+                            <div id="myProgress">
+                                <div id="myBar">0%</div>
+                            </div>
                         </div>
                     </div>
                     <div class="row" style="margin: 0; margin-top: 30px">
@@ -397,7 +413,7 @@
                             </h3>
                             <div class="d-flex align-items-center" style="margin-top: 0px;">
                                 <h1 id="practiceWord" style="font-size: 7rem; color: #46a3c1">&nbsp;B</h1>
-                                <div class="d-flex justify-content-center align-items-center" style="
+                                <div onmouseover="suggOver(this)" onmouseout="suggOut(this)" class="d-flex justify-content-center align-items-center" style="
                       margin-left: 16px;
                       border-radius: 20px;
                       background-color: #d5f7ff;
@@ -655,29 +671,29 @@
                                             <div class="key--letter" data-char="E">R</div>
                                             <div class="key--letter" data-char="R">N</div>
                                             <div class="key--letter" data-char="T">H</div>
-                                            <div class="key--letter" data-char="Y">*</div>
-                                            <div class="key--letter" data-char="U">W</div>
-                                            <div class="key--letter" data-char="I">J</div>
-                                            <div class="key--letter" data-char="O">N</div>
-                                            <div class="key--letter" data-char="P">T</div>
+                                            <div class="key--letter" data-char="U">*</div>
+                                            <div class="key--letter" data-char="I">W</div>
+                                            <div class="key--letter" data-char="O">J</div>
+                                            <div class="key--letter" data-char="P">N</div>
+                                            <div class="key--letter" data-key="219" data-char="{[">T</div>
                                         </div>
                                         <div class="keyboard__row keyboard__row--h3">
-                                            <div class="key--letter" data-char="Q">T</div>
-                                            <div class="key--letter" data-char="W">P</div>
-                                            <div class="key--letter" data-char="E">H</div>
-                                            <div class="key--letter" data-char="R">N</div>
-                                            <div class="key--letter" data-char="T">S</div>
-                                            <div class="key--letter" data-char="Y">I</div>
-                                            <div class="key--letter" data-char="U">Y</div>
-                                            <div class="key--letter" data-char="I">J</div>
-                                            <div class="key--letter" data-char="O">N</div>
-                                            <div class="key--letter" data-char="P">K</div>
+                                            <div class="key--letter" data-char="A">T</div>
+                                            <div class="key--letter" data-char="S">P</div>
+                                            <div class="key--letter" data-char="D">H</div>
+                                            <div class="key--letter" data-char="F">N</div>
+                                            <div class="key--letter" data-char="G">S</div>
+                                            <div class="key--letter" data-char="J">I</div>
+                                            <div class="key--letter" data-char="K">Y</div>
+                                            <div class="key--letter" data-char="L">J</div>
+                                            <div class="key--letter" data-key="186">N</div>
+                                            <div class="key--letter" data-key="222">K</div>
                                         </div>
                                         <div class="keyboard__row keyboard__row--h4">
-                                            <div class="key--letter" data-char="Q">U</div>
-                                            <div class="key--letter" data-char="W">O</div>
-                                            <div class="key--letter" style="margin-left: 20px;" data-char="E">E</div>
-                                            <div class="key--letter" data-char="R">A</div>
+                                            <div class="key--letter" data-char="C">U</div>
+                                            <div class="key--letter" data-char="V">O</div>
+                                            <div class="key--letter" style="margin-left: 20px;" data-char="N">E</div>
+                                            <div class="key--letter" data-char="M">A</div>
                                         </div>
                                     </div>
                                     
@@ -749,10 +765,10 @@
     <script src="js/sb-admin-2.min.js"></script>
 
     <!-- Page level plugins -->
-    <script src="vendor/chart.js/Chart.min.js"></script>
+    <!-- <script src="vendor/chart.js/Chart.min.js"></script> -->
 
     <!-- Page level custom scripts -->
-    <script src="js/demo/chart-area-demo.js"></script>
+    <!-- <script src="js/demo/chart-area-demo.js"></script> -->
 
     <!-- Simple keyboard  -->
     <!-- <script src="https://cdn.jsdelivr.net/npm/simple-keyboard@latest/build/index.js"></script> -->

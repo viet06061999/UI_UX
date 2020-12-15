@@ -1,3 +1,22 @@
+const firstDictionary = [['B','P',''],['C','K',''],['D','S','P'],['CH','S','K'],['G','K','P'],['L','S','R'],['M','R','H'],['N','P','R'],['GI','S','H'],['GH','K','P']];
+var currentIndex = 0;
+var currentWord = document.getElementById('practiceWord');
+currentWord.innerHTML = firstDictionary[currentIndex][0];
+var myBar = document.getElementById("myBar");
+var widthBar = 0;
+var tempBar = 0;
+var idBar;
+
+function changeBar() {
+    if(widthBar >= tempBar) {
+        clearInterval(idBar);
+    } else {
+        widthBar++;
+        myBar.style.width = widthBar + "%";
+        myBar.innerHTML = widthBar + "%";
+    }
+}
+
 function getKey (e) {
     var location = e.location;
     var selector;
@@ -10,7 +29,17 @@ function getKey (e) {
             '[data-char*="' + encodeURIComponent(String.fromCharCode(code)) + '"]'
         ].join(',');
     }
-    return document.querySelector(selector);
+    
+    return document.querySelectorAll(selector);
+}
+
+function getKeyByCode (code) {
+    selector = [
+        '[data-key="' + code + '"]',
+        '[data-char*="' + encodeURIComponent(code) + '"]'
+    ].join(',');
+    
+    return document.querySelectorAll(selector);
 }
 
 function pressKey (char) {
@@ -26,38 +55,193 @@ function pressKey (char) {
     }, 200);
 }
 
-var h1 = document.querySelector('h1');
-var originalQueue = h1.innerHTML;
-var queue = h1.innerHTML;
-
-function next () {
-    var c = queue[0];
-    queue = queue.slice(1);
-    h1.innerHTML = originalQueue.slice(0, originalQueue.length - queue.length);
-    pressKey(c);
-    if (queue.length) {
-        setTimeout(next, Math.random() * 200 + 50);
+function normalToSteno(e) {
+    var convertList = [['Q','S'],['W','K'],['E','R'],['R','N'],['T','H'],['U','*'],['I','W'],['O','J'],['P','N'],['219','T'],['{[','T'],
+    ['A','T'],['S','P'],['D','H'],['F','N'],['G','S'],['J','I'],['K','Y'],['L','J'],['186','N'],['222','K'],['32',' '],['C','U'],['V','O'],
+    ['N','E'],['M','A']];
+    var code = e.keyCode || e.which;
+    for(let i=0 ; i<convertList.length ; i++) {
+        if(convertList[i][0] == code || convertList[i][0] == String.fromCharCode(code)) {
+            return convertList[i][1];
+        } 
     }
+    return null;
 }
 
-h1.innerHTML = "&nbsp;";
-setTimeout(next, 500);
+function stenoToNormal(code) {
+    var convertList = [['Q','S'],['W','K'],['E','R'],['R','N'],['T','H'],['U','*'],['I','W'],['O','J'],['P','N'],['219','T'],['{[','T'],
+    ['A','T'],['S','P'],['D','H'],['F','N'],['G','S'],['J','I'],['K','Y'],['L','J'],['186','N'],['222','K'],['32',' '],['C','U'],['V','O'],
+    ['N','E'],['M','A']];
+    
+    for(let i=0 ; i<convertList.length ; i++) {
+        if(code.charCodeAt(0) == convertList[i][1].charCodeAt(0)) {
+            return convertList[i][0];
+        }
+    }
+    return null;
+}
 
+var keyPressed = []; 
 document.body.addEventListener('keydown', function (e) {
     var key = getKey(e);
-    if (!key) {
-        return console.warn('No key for', e.keyCode);
+    if(currentIndex<2) {
+        if(firstDictionary[currentIndex][1].charCodeAt(0) == normalToSteno(e).charCodeAt(0)) {
+            for(let i=0 ; i<key.length ; i++) {
+                if (!key[i]) {
+                    return console.warn('No key for', e.keyCode);
+                }
+            
+                key[i].setAttribute('data-pressed', 'on');
+                if(key[i].getAttribute('style') == 'margin-left: 20px;') {
+                    key[i].setAttribute('style', 'background-color: #197aff;color: white;margin-left: 20px;');
+                } else {
+                    key[i].setAttribute('style', 'background-color: #197aff;color: white;');
+                }
+            }
+            nextWord();
+        } else {
+            for(let i=0 ; i<key.length ; i++) {
+                if (!key[i]) {
+                    return console.warn('No key for', e.keyCode);
+                }
+            
+                key[i].setAttribute('data-pressed', 'on');
+                if(key[i].getAttribute('style') == 'margin-left: 20px;') {
+                    key[i].setAttribute('style', 'background-color: #ff1919;color: white;margin-left: 20px;');
+                } else {
+                    key[i].setAttribute('style', 'background-color: #ff1919;color: white;');
+                }
+                
+            }
+        }
+    } else {
+        if(normalToSteno(e).charCodeAt(0) != keyPressed[0] &&
+        (firstDictionary[currentIndex][1].charCodeAt(0) == normalToSteno(e).charCodeAt(0) ||
+        firstDictionary[currentIndex][2].charCodeAt(0) == normalToSteno(e).charCodeAt(0))) {
+            keyPressed.unshift(normalToSteno(e).charCodeAt(0));
+            for(let i=0 ; i<key.length ; i++) {
+                if (!key[i]) {
+                    return console.warn('No key for', e.keyCode);
+                }
+            
+                key[i].setAttribute('data-pressed', 'on');
+                if(key[i].getAttribute('style') == 'margin-left: 20px;') {
+                    key[i].setAttribute('style', 'background-color: #197aff;color: white;margin-left: 20px;');
+                } else {
+                    key[i].setAttribute('style', 'background-color: #197aff;color: white;');
+                }
+            }
+            if(keyPressed.length == 2) {
+                nextWord();
+            }
+        } else {
+            for(let i=0 ; i<key.length ; i++) {
+                if (!key[i]) {
+                    return console.warn('No key for', e.keyCode);
+                }
+            
+                key[i].setAttribute('data-pressed', 'on');
+                if(key[i].getAttribute('style') == 'margin-left: 20px;') {
+                    key[i].setAttribute('style', 'background-color: #ff1919;color: white;margin-left: 20px;');
+                } else {
+                    key[i].setAttribute('style', 'background-color: #ff1919;color: white;');
+                }
+                
+            }
+        }
     }
-
-    key.setAttribute('data-pressed', 'on');
-    key.setAttribute('style', 'background-color: #197aff;color: white;');
+    
+    
 });
 
 document.body.addEventListener('keyup', function (e) {
     var key = getKey(e);
-    key && key.removeAttribute('data-pressed');
-    key.removeAttribute('style', 'background-color: #197aff;color: white;');
+    if(normalToSteno(e).charCodeAt(0) == keyPressed[0] ){
+        keyPressed.pop();
+    };
+    for(let i=0 ; i<key.length ; i++) {
+        key[i] && key[i].removeAttribute('data-pressed');
+        if(key[i].getAttribute('style') == 'background-color: #197aff;color: white;margin-left: 20px;' ||
+           key[i].getAttribute('style') == 'background-color: #ff1919;color: white;margin-left: 20px;') {
+            key[i].setAttribute('style', 'margin-left: 20px;');
+        } else {
+            key[i].setAttribute('style', '');
+        }
+        
+    }
+    
 });
+
+function nextWord() {
+    
+    if(tempBar < 100) {
+        tempBar = tempBar + 10;
+        idBar = setInterval(changeBar, 60);
+    } else {
+        
+    }
+    if(currentIndex==9) {
+        currentIndex = 0;
+    } else {
+        currentIndex++;
+        currentWord.innerHTML = firstDictionary[currentIndex][0];
+    }
+    if(keyPressed.length>0) {
+        keyPressed.pop();
+    }
+}
+
+function suggOver(x) {
+    x.setAttribute('style', 'margin-left: 16px;border-radius: 20px;background-color: #00ff32;width: 77px;padding: 6px;');
+    var key1 = getKeyByCode(stenoToNormal(firstDictionary[currentIndex][1]));
+    for(let i=0 ; i<key1.length ; i++) {
+        key1[i].setAttribute('data-pressed', 'on');
+        if(key1[i].getAttribute('style') == 'margin-left: 20px;') {
+            key1[i].setAttribute('style', 'background-color: #2bc119;color: white;margin-left: 20px;');
+        } else {
+            key1[i].setAttribute('style', 'background-color: #2bc119;color: white;');
+        }
+    }
+    if(currentIndex>1) {
+        var key2 = getKeyByCode(stenoToNormal(firstDictionary[currentIndex][2]));
+        for(let i=0 ; i<key2.length ; i++) {key2[i].setAttribute('data-pressed', 'on');
+            if(key2[i].getAttribute('style') == 'margin-left: 20px;') {
+                key2[i].setAttribute('style', 'background-color: #2bc119;color: white;margin-left: 20px;');
+            } else {
+                key2[i].setAttribute('style', 'background-color: #2bc119;color: white;');
+            }
+        }
+    }
+
+}
+
+function suggOut(x) {
+    x.setAttribute('style', 'margin-left: 16px;border-radius: 20px;background-color: #d5f7ff;width: 77px;padding: 6px;');
+
+    var key1 = getKeyByCode(stenoToNormal(firstDictionary[currentIndex][1]));
+    for(let i=0 ; i<key1.length ; i++) {
+        key1[i] && key1[i].removeAttribute('data-pressed');
+        if(key1[i].getAttribute('style') == 'background-color: #197aff;color: white;margin-left: 20px;' ||
+           key1[i].getAttribute('style') == 'background-color: #ff1919;color: white;margin-left: 20px;') {
+            key1[i].setAttribute('style', 'margin-left: 20px;');
+        } else {
+            key1[i].setAttribute('style', '');
+        }
+    }
+    if(currentIndex>1) {
+        var key2 = getKeyByCode(stenoToNormal(firstDictionary[currentIndex][2]));
+        for(let i=0 ; i<key2.length ; i++) {
+            key2[i].setAttribute('data-pressed', 'on');
+            key2[i] && key1[i].removeAttribute('data-pressed');
+            if(key2[i].getAttribute('style') == 'background-color: #197aff;color: white;margin-left: 20px;' ||
+            key2[i].getAttribute('style') == 'background-color: #ff1919;color: white;margin-left: 20px;') {
+                key2[i].setAttribute('style', 'margin-left: 20px;');
+            } else {
+                key2[i].setAttribute('style', '');
+            }
+        }
+    }
+}
 
 function size () {
     var size = keyboard.parentNode.clientWidth / 90;

@@ -41,12 +41,3 @@ function hide() {
     }
 }
 
-function nextWord() {
-    var word = document.getElementById("practiceWord");
-    if ( word.innerHTML == "A"){
-        word.innerHTML = "B"
-    }else{
-        word.innerHTML = "A"
-    }
-}
-
