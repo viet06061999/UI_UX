@@ -6,14 +6,28 @@ var myBar = document.getElementById("myBar");
 var widthBar = 0;
 var tempBar = 0;
 var idBar;
+var result = [];
+var modal = document.getElementById("myModal");
+var resultModal = 0;
 
 function changeBar() {
     if(widthBar >= tempBar) {
         clearInterval(idBar);
     } else {
         widthBar++;
-        myBar.style.width = widthBar + "%";
+        myBar.setAttribute('style',getBackgroundBar() + 'width:' + widthBar + '%');
+        // myBar.style.width = widthBar + "%";
         myBar.innerHTML = widthBar + "%";
+        if(widthBar == 100) {
+            setTimeout(function () {
+                let divResultModal = document.createElement('div');
+                divResultModal.setAttribute('style', 'color: #466ddc; font-size: 29px;font-weight: 600;')
+                divResultModal.setAttribute('class', 'text-center');
+                divResultModal.innerHTML = 'Kết quả : ' + resultModal + '/10';
+                document.getElementById('resultModal').appendChild(divResultModal);
+                document.getElementById('openModal').click();
+            }, 500);
+        }
     }
 }
 
@@ -98,7 +112,7 @@ document.body.addEventListener('keydown', function (e) {
                     key[i].setAttribute('style', 'background-color: #197aff;color: white;');
                 }
             }
-            nextWord();
+            nextWord(true);
         } else {
             for(let i=0 ; i<key.length ; i++) {
                 if (!key[i]) {
@@ -132,7 +146,7 @@ document.body.addEventListener('keydown', function (e) {
                 }
             }
             if(keyPressed.length == 2) {
-                nextWord();
+                nextWord(true);
             }
         } else {
             for(let i=0 ; i<key.length ; i++) {
@@ -172,10 +186,44 @@ document.body.addEventListener('keyup', function (e) {
     
 });
 
-function nextWord() {
+function getBackgroundBar() {
+    if(result.length==0) return '';
+    
+    let unit = 100/(result.length);
+    let colorString = '' + getColorBarUnit(result[0]) + ' ' + unit + '%';
+    if(result.length>1) {
+        for(let i=1 ; i<result.length ; i++) {
+            colorString += ', ' + getColorBarUnit(result[i]) + ' ' + (unit*i) + '%';
+            colorString += ', ' + getColorBarUnit(result[i]) + ' ' + (unit*(i+1)) + '%';
+        }
+    } else {
+        colorString += ', ' + getColorBarUnit(result[0]) + ' ' + unit + '%';
+    }
+    return 'background:linear-gradient(to right,' + colorString + ');';
+    
+
+}
+
+function getColorBarUnit(check) {
+    if(check){
+        return '#4CAF50';
+    } else {
+        return '#e05d5d';
+    }
+
+}
+
+function nextWord(isCorrect) {
     
     if(tempBar < 100) {
         tempBar = tempBar + 10;
+        if(isCorrect) {
+            result.push(true);
+            resultModal++;
+        } else {
+            result.push(false);
+        }
+        // myBar.setAttribute('style',getBackgroundBar());
         idBar = setInterval(changeBar, 60);
     } else {
         
