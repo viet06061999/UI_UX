@@ -10,11 +10,11 @@ var handler = function (e) {
 }
 handler.data = [];
 
-function recordClickKeyboard() {
-    console.log(window.addEventListener("keydown",  handler));
-}
+// function recordClickKeyboard() {
+//     console.log(window.addEventListener("keydown",  handler));
+// }
 
-recordClickKeyboard();
+// recordClickKeyboard();
 
 function setTime() {
     ++totalSeconds;
@@ -38,15 +38,6 @@ function hide() {
         keyboard.style.display = "flex";
     } else {
         keyboard.style.display = "none";
-    }
-}
-
-function nextWord() {
-    var word = document.getElementById("practiceWord");
-    if ( word.innerHTML == "A"){
-        word.innerHTML = "B"
-    }else{
-        word.innerHTML = "A"
     }
 }
 
