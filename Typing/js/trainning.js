@@ -1,6 +1,6 @@
 const firstDictionary = [['B','P',''],['CH','K',''],['D','S','P'],['CH','S','K'],['G','K','P'],['L','S','R'],['M','R','H'],['NH','P','R'],['GI','S','H'],['GH','K','P']];
-const mainDictionary = [['A','P',''],['A','K',''],['U','S','P'],['I','S','K'],['A','K','P'],['OA','S','R'],['I','R','H'],['U','P','R'],['A','S','H'],['E','K','P']];
-const lastDictionary = [['O','P',''],['N','K',''],['NG','S','P'],['NH','S','K'],['N','K','P'],['N','S','R'],['N','R','H'],['NG','P','R'],['N','S','H'],['P','K','P']];
+const mainDictionary = [['A','A',''],['A','A',''],['ƯƠ','E','W'],['I','K','R'],['A','A','P'],['OA','U','R'],['I','R','H'],['U','P','R'],['A','S','H'],['E','K','P']];
+const lastDictionary = [['M','T',''],['N','N',''],['NG','N','A'],['NH','N','I'],['N','N','P'],['N','N','R'],['N','R','H'],['NG','P','R'],['N','S','H'],['P','K','P']];
 var currentIndex = 0;
 var currentWord = document.getElementById('practiceWord');
 currentWord.innerHTML = firstDictionary[currentIndex][0]+mainDictionary[currentIndex][0]+lastDictionary[currentIndex][0];
@@ -331,12 +331,12 @@ function nextWordP(isCorrect) {
     }
 }
 function suggOver(x) {
-    x.setAttribute('style', 'margin-left: 16px;border-radius: 20px;background-color: #00ff32;width: 77px;padding: 6px;');
+    x.setAttribute('style', 'margin-left: 16px;border-radius: 20px;background-color: #00ff33;width: 77px;padding: 6px;');
     var key1 = getKeyByCode(stenoToNormal(firstDictionary[currentIndex][1]));
     for(let i=0 ; i<key1.length ; i++) {
         key1[i].setAttribute('data-pressed', 'on');
         if(key1[i].getAttribute('style') == 'margin-left: 20px;') {
-            key1[i].setAttribute('style', 'background-color: #2bc119;color: white;margin-left: 20px;');
+            key1[i].setAttribute('style', 'background-color: #FFCC33;color: white;margin-left: 20px;');
         } else {
             key1[i].setAttribute('style', 'background-color: #2bc119;color: white;');
         }
@@ -352,12 +352,98 @@ function suggOver(x) {
         }
     }
 
+    var key3 = getKeyByCode(stenoToNormal(mainDictionary[currentIndex][1]));
+    for(let i=0 ; i<key3.length ; i++) {
+        key3[i].setAttribute('data-pressed', 'on');
+        if(key3[i].getAttribute('style') == 'margin-left: 20px;') {
+            key3[i].setAttribute('style', 'background-color: #3399CC		;color: white;margin-left: 20px;');
+        } else {
+            key3[i].setAttribute('style', 'background-color: #3399CC		;color: white;');
+        }
+    }
+    if(currentIndex>1) {
+        var key4 = getKeyByCode(stenoToNormal(mainDictionary[currentIndex][2]));
+        for(let i=0 ; i<key4.length ; i++) {key4[i].setAttribute('data-pressed', 'on');
+            if(key4[i].getAttribute('style') == 'margin-left: 20px;') {
+                key4[i].setAttribute('style', 'background-color: #3399CC		;color: white;margin-left: 20px;');
+            } else {
+                key4[i].setAttribute('style', 'background-color: #3399CC		;color: white;');
+            }
+        }
+    }
+
+    var key5 = getKeyByCode(stenoToNormal(lastDictionary[currentIndex][1]));
+    for(let i=0 ; i<key5.length ; i++) {
+        key5[i].setAttribute('data-pressed', 'on');
+        if(key5[i].getAttribute('style') == 'margin-left: 20px;') {
+            key5[i].setAttribute('style', 'background-color: #FFCC33;color: white;margin-left: 20px;');
+        } else {
+            key5[i].setAttribute('style', 'background-color: #FFCC33;color: white;');
+        }
+    }
+    if(currentIndex>1) {
+        var key6 = getKeyByCode(stenoToNormal(lastDictionary[currentIndex][2]));
+        for(let i=0 ; i<key6.length ; i++) {key6[i].setAttribute('data-pressed', 'on');
+            if(key6[i].getAttribute('style') == 'margin-left: 20px;') {
+                key6[i].setAttribute('style', 'background-color: #FFCC33;color: white;margin-left: 20px;');
+            } else {
+                key6[i].setAttribute('style', 'background-color: #FFCC33;color: white;');
+            }
+        }
+    }
+
 }
 
 function suggOut(x) {
     x.setAttribute('style', 'margin-left: 16px;border-radius: 20px;background-color: #d5f7ff;width: 77px;padding: 6px;');
 
     var key1 = getKeyByCode(stenoToNormal(firstDictionary[currentIndex][1]));
+    for(let i=0 ; i<key1.length ; i++) {
+        key1[i] && key1[i].removeAttribute('data-pressed');
+        if(key1[i].getAttribute('style') == 'background-color: #197aff;color: white;margin-left: 20px;' ||
+           key1[i].getAttribute('style') == 'background-color: #ff1919;color: white;margin-left: 20px;') {
+            key1[i].setAttribute('style', 'margin-left: 20px;');
+        } else {
+            key1[i].setAttribute('style', '');
+        }
+    }
+    if(currentIndex>1) {
+        var key2 = getKeyByCode(stenoToNormal(mainDictionary[currentIndex][2]));
+        for(let i=0 ; i<key2.length ; i++) {
+            key2[i].setAttribute('data-pressed', 'on');
+            key2[i] && key1[i].removeAttribute('data-pressed');
+            if(key2[i].getAttribute('style') == 'background-color: #197aff;color: white;margin-left: 20px;' ||
+            key2[i].getAttribute('style') == 'background-color: #ff1919;color: white;margin-left: 20px;') {
+                key2[i].setAttribute('style', 'margin-left: 20px;');
+            } else {
+                key2[i].setAttribute('style', '');
+            }
+        }
+    }
+    var key1 = getKeyByCode(stenoToNormal(mainDictionary[currentIndex][1]));
+    for(let i=0 ; i<key1.length ; i++) {
+        key1[i] && key1[i].removeAttribute('data-pressed');
+        if(key1[i].getAttribute('style') == 'background-color: #197aff;color: white;margin-left: 20px;' ||
+           key1[i].getAttribute('style') == 'background-color: #ff1919;color: white;margin-left: 20px;') {
+            key1[i].setAttribute('style', 'margin-left: 20px;');
+        } else {
+            key1[i].setAttribute('style', '');
+        }
+    }
+    if(currentIndex>1) {
+        var key2 = getKeyByCode(stenoToNormal(lastDictionary[currentIndex][2]));
+        for(let i=0 ; i<key2.length ; i++) {
+            key2[i].setAttribute('data-pressed', 'on');
+            key2[i] && key1[i].removeAttribute('data-pressed');
+            if(key2[i].getAttribute('style') == 'background-color: #197aff;color: white;margin-left: 20px;' ||
+            key2[i].getAttribute('style') == 'background-color: #ff1919;color: white;margin-left: 20px;') {
+                key2[i].setAttribute('style', 'margin-left: 20px;');
+            } else {
+                key2[i].setAttribute('style', '');
+            }
+        }
+    }
+    var key1 = getKeyByCode(stenoToNormal(lastDictionary[currentIndex][1]));
     for(let i=0 ; i<key1.length ; i++) {
         key1[i] && key1[i].removeAttribute('data-pressed');
         if(key1[i].getAttribute('style') == 'background-color: #197aff;color: white;margin-left: 20px;' ||
