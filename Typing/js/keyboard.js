@@ -137,7 +137,6 @@ document.body.addEventListener('keydown', function (e) {
                 if (!key[i]) {
                     return console.warn('No key for', e.keyCode);
                 }
-            
                 key[i].setAttribute('data-pressed', 'on');
                 if(key[i].getAttribute('style') == 'margin-left: 20px;') {
                     key[i].setAttribute('style', 'background-color: #197aff;color: white;margin-left: 20px;');
@@ -153,7 +152,6 @@ document.body.addEventListener('keydown', function (e) {
                 if (!key[i]) {
                     return console.warn('No key for', e.keyCode);
                 }
-            
                 key[i].setAttribute('data-pressed', 'on');
                 if(key[i].getAttribute('style') == 'margin-left: 20px;') {
                     key[i].setAttribute('style', 'background-color: #ff1919;color: white;margin-left: 20px;');

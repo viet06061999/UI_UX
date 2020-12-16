@@ -1,6 +1,6 @@
 const firstDictionary = [['B','P',''],['CH','K',''],['D','S','P'],['CH','S','K'],['G','K','P'],['L','S','R'],['M','R','H'],['NH','P','R'],['GI','S','H'],['GH','K','P']];
 const mainDictionary = [['A','P',''],['A','K',''],['U','S','P'],['I','S','K'],['A','K','P'],['OA','S','R'],['I','R','H'],['U','P','R'],['A','S','H'],['E','K','P']];
-const lastDictionary = [['O','P',''],['','',''],['NG','S','P'],['','S','K'],['N','K','P'],['N','S','R'],['N','R','H'],['','P','R'],['N','S','H'],['P','K','P']];
+const lastDictionary = [['O','P',''],['N','K',''],['NG','S','P'],['NH','S','K'],['N','K','P'],['N','S','R'],['N','R','H'],['NG','P','R'],['N','S','H'],['P','K','P']];
 var currentIndex = 0;
 var currentWord = document.getElementById('practiceWord');
 currentWord.innerHTML = firstDictionary[currentIndex][0]+mainDictionary[currentIndex][0]+lastDictionary[currentIndex][0];
@@ -11,7 +11,7 @@ var idBar;
 var result = [];
 var modal = document.getElementById("myModal");
 var resultModal = 0;
-
+var am = 1;
 function changeBar() {
     if(widthBar >= tempBar) {
         clearInterval(idBar);
@@ -97,8 +97,7 @@ function stenoToNormal(code) {
     return null;
 }
 
-var keyPressed = []; 
-document.body.addEventListener('keydown', function (e) {
+function firstchar(e){
     var key = getKey(e);
     if(currentIndex<2) {
         if(firstDictionary[currentIndex][1].charCodeAt(0) == normalToSteno(e).charCodeAt(0)) {
@@ -166,6 +165,85 @@ document.body.addEventListener('keydown', function (e) {
             }
         }
     }
+}
+
+var keyPressed = []; 
+document.body.addEventListener('keydown', function (e) {
+    let array = [];
+    if(am==1){
+        array= firstDictionary;
+    } else if(am==2){
+        array = mainDictionary;
+    } else if (am==3){
+        array = lastDictionary;
+    }
+    var key = getKey(e);
+    if(currentIndex<2) {
+        if(array[currentIndex][1].charCodeAt(0) == normalToSteno(e).charCodeAt(0)) {
+            for(let i=0 ; i<key.length ; i++) {
+                if (!key[i]) {
+                    return console.warn('No key for', e.keyCode);
+                }
+            
+                key[i].setAttribute('data-pressed', 'on');
+                if(key[i].getAttribute('style') == 'margin-left: 20px;') {
+                    key[i].setAttribute('style', 'background-color: #197aff;color: white;margin-left: 20px;');
+                } else {
+                    key[i].setAttribute('style', 'background-color: #197aff;color: white;');
+                }
+            }
+            nextWord();
+        } else {
+            for(let i=0 ; i<key.length ; i++) {
+                if (!key[i]) {
+                    return console.warn('No key for', e.keyCode);
+                }
+            
+                key[i].setAttribute('data-pressed', 'on');
+                if(key[i].getAttribute('style') == 'margin-left: 20px;') {
+                    key[i].setAttribute('style', 'background-color: #ff1919;color: white;margin-left: 20px;');
+                } else {
+                    key[i].setAttribute('style', 'background-color: #ff1919;color: white;');
+                }
+                
+            }
+        }
+    } else {
+        if(normalToSteno(e).charCodeAt(0) != keyPressed[0] &&
+        (array[currentIndex][1].charCodeAt(0) == normalToSteno(e).charCodeAt(0) ||
+        array[currentIndex][2].charCodeAt(0) == normalToSteno(e).charCodeAt(0))) {
+            keyPressed.unshift(normalToSteno(e).charCodeAt(0));
+            for(let i=0 ; i<key.length ; i++) {
+                if (!key[i]) {
+                    return console.warn('No key for', e.keyCode);
+                }
+            
+                key[i].setAttribute('data-pressed', 'on');
+                if(key[i].getAttribute('style') == 'margin-left: 20px;') {
+                    key[i].setAttribute('style', 'background-color: #197aff;color: white;margin-left: 20px;');
+                } else {
+                    key[i].setAttribute('style', 'background-color: #197aff;color: white;');
+                }
+            }
+            if(keyPressed.length == 2) {
+                nextWord();
+            }
+        } else {
+            for(let i=0 ; i<key.length ; i++) {
+                if (!key[i]) {
+                    return console.warn('No key for', e.keyCode);
+                }
+            
+                key[i].setAttribute('data-pressed', 'on');
+                if(key[i].getAttribute('style') == 'margin-left: 20px;') {
+                    key[i].setAttribute('style', 'background-color: #ff1919;color: white;margin-left: 20px;');
+                } else {
+                    key[i].setAttribute('style', 'background-color: #ff1919;color: white;');
+                }
+                
+            }
+        }
+    }
     
     
 });
@@ -215,7 +293,19 @@ function getColorBarUnit(check) {
 
 }
 
-function nextWord(isCorrect) {
+function nextWord() {
+    if(am==3) {
+        am=1;
+        nextWordP(true);
+    } else {
+        am++;
+    }
+    if(keyPressed.length>0) {
+        keyPressed.pop();
+    }
+}
+
+function nextWordP(isCorrect) {
     
     if(tempBar < 100) {
         tempBar = tempBar + 10;
@@ -240,7 +330,6 @@ function nextWord(isCorrect) {
         keyPressed.pop();
     }
 }
-
 function suggOver(x) {
     x.setAttribute('style', 'margin-left: 16px;border-radius: 20px;background-color: #00ff32;width: 77px;padding: 6px;');
     var key1 = getKeyByCode(stenoToNormal(firstDictionary[currentIndex][1]));
