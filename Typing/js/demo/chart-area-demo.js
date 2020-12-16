@@ -49,7 +49,23 @@ var myLineChart = new Chart(ctx, {
       pointHitRadius: 10,
       pointBorderWidth: 2,
       data: [100, 102, 104, 103, 103, 110, 112, 115, 135, 138, 145, 150,160, 170, 180, 190, 200, 210, 220, 230, 240, 250, 260, 270,],
-    }],
+    },
+    {
+          label: "Phút:",
+          lineTension: 0.3,
+          backgroundColor: "rgba(51, 255, 255, 0.05)",
+          borderColor: "rgba(0, 200, 0, 1)",
+          pointRadius: 3,
+          pointBackgroundColor:  "rgba(0, 200, 0, 1)",
+          pointBorderColor:  "rgba(0, 200, 0, 1)",
+          pointHoverRadius: 3,
+          pointHoverBackgroundColor: "rgba(78, 115, 223, 1)",
+          pointHoverBorderColor: "rgba(78, 115, 223, 1)",
+          pointHitRadius: 10,
+          pointBorderWidth: 2,
+          data: [50, 60, 30, 70, 80, 20, 55, 60, 40, 25, 50, 60, 30, 70, 80, 20, 55, 60, 40, 25, 70, 80 , 50, 60,70,],
+        }
+    ],
   },
   options: {
     maintainAspectRatio: false,
@@ -93,11 +109,7 @@ var myLineChart = new Chart(ctx, {
           drawBorder: false,
           borderDash: [2],
           zeroLineBorderDash: [2]
-        },
-        scaleLabel: {
-                display: true,
-                labelString: 'Tốc độ gõ'
-              }
+        }
       }],
     },
     legend: {
