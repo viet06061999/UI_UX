@@ -478,44 +478,42 @@
 
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
+                    
                     <div class="row">
-                        <div class="col d-flex flex-column justify-content-center align-items-center">
-                            <div id="myProgress">
-                                <div id="myBar">0%</div>
-                            </div>
+                        <div class="col-6" style="margin-right: 77px;">
+                            <textarea id="textleft" cols="98" rows="10"></textarea>
                         </div>
-                    </div>
-                    <div class="row" style="margin: 0; margin-top: 30px">
-                        <div class="col d-flex flex-column justify-content-center align-items-center">
-                            <h3 style="color: rgb(76, 76, 77)">
-                                Hãy đánh lại ký tự sau &nbsp; &nbsp;&nbsp;
-                            </h3>
-                            <div class="d-flex align-items-center" style="margin-top: 0px;">
-                                <h1 id="practiceWord" style="font-size: 7rem; color: #46a3c1">&nbsp;</h1>
-                                <div onmouseover="suggOver(this)" onmouseout="suggOut(this)" class="d-flex justify-content-center align-items-center" style="
-                      margin-left: 16px;
-                      border-radius: 20px;
-                      background-color: #d5f7ff;
-                      width: 77px;
-                      padding: 6px;
-                    ">
-                                    <i class="fa fa-question" style="font-size: 24px; color: #15586d"></i>
-                                    <p style="
-                        margin-bottom: 0;
-                        margin-left: 7px;
-                        font-size: 14px;
-                      ">
-                                        <strong><em>Gợi ý</em></strong>
-                                    </p>
-                                </div>
-                            </div>
+                        <div class="col-2">
+                            <textarea id="textright" cols="20" rows="10" disabled></textarea>
                         </div>
+                        <div class="col-3" style="border:thin solid #343a40  ;">
+                            <table class="table">
+                                <thead class="thead-dark">
+                                  <tr>
+                                    <th colspan="2" scope="col" style="text-align: center;">Thông tin</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <td>Tốc độ gõ</td>
+                                    <td>5 từ/phút</td>
+                                  </tr>
+                                  <tr>
+                                    <td>Tỉ lệ gõ đúng</td>
+                                    <td>100%</td>
+                                  </tr>
+                                  <tr>
+                                    <td>Thời gian : </td>
+                                    <td><label id="minutes">00</label>:<label id="seconds">00</label></td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                        </div>
+                        
+                        
                     </div>
-                    <hr style="
-                width: 50%;
-                border-top: 2px solid grey;
-                color: rgb(0, 0, 0);
-              " />
+
+
                     <div class="row" id="keyboardWrapper">
                         <div class="col d-flex flex-row justify-content-center" style="margin-top: 42px">
                             
@@ -788,36 +786,11 @@
             <!-- Footer -->
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
-                    <div class="row" style="margin-top: 35px">
-                        <div class="col d-flex justify-content-center align-items-center">
-                            <button onclick="nextWordP(false)" class="btn btn-primary" type="button"
-                                style="background-color: #e5e5e5; color: #46a3c1">
-                                <strong>Ký tự tiếp theo</strong>
-                            </button>
-                        </div>
+                    <div class="row justify-content-center">
                         <div id='keyboardToggle' class="col d-flex justify-content-center align-items-center">
                             <i class="fas fa-keyboard" style="font-size: 27px; color: rgb(65, 65, 65)"></i>
-                            <p style="
-                    margin-left: 5px;
-                    margin-bottom: 0;
-                    font-size: 14px;
-                    color: rgb(86, 86, 86);
-                  ">
+                            <p style="margin-left: 5px; margin-bottom: 0;font-size: 14px;color: rgb(86, 86, 86);">
                                 <button onclick="hide()" id='keyboardToggle'>Hiện bàn phím</button>
-                            </p>
-                        </div>
-                        <div class="col d-flex justify-content-center align-items-center">
-                            <p style="
-                    margin-bottom: 0;
-                    margin-right: 6px;
-                    color: rgb(74, 74, 74);
-                  ">
-                                <strong>Thời gian luyện tập</strong>
-                            </p>
-                            <i class="fa fa-clock-o"></i>
-                            <p style="margin-bottom: 0; margin-left: 6px; font-size: 24px">
-                                <strong><label id="minutes">00</label>:<label id="seconds">00</label>
-                                </strong>
                             </p>
                         </div>
                     </div>
@@ -880,7 +853,7 @@
     <!-- <script src="https://cdn.jsdelivr.net/npm/simple-keyboard@latest/build/index.js"></script> -->
     <!-- <script src="js/simple_keyboard.js"></script> -->
     <script src="../Typing/js/practice_main.js"></script>
-    <script src="js/trainning.js"></script>
+    <script src="js/typing.js"></script>
 </body>
 
 </html>

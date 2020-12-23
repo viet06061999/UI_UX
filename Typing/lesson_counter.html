@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>UX-UI</title>
+
+    <!-- Custom fonts for this template-->
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+    <link
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
+
+    <!-- Custom styles for this template-->
+    <link href="css/sb-admin-2.min.css" rel="stylesheet">
+    <link href="css/lessons.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simple-keyboard@latest/build/css/index.css">
+    <style>
+        div.ex1 {
+            margin-left: 30px;
+        }
+
+        div.update {
+            display: table-cell;
+            vertical-align: middle;
+            text-align: center;
+        }
+
+        #e40_4 {
+            overflow: hidden;
+            opacity: 1;
+            width: 370px;
+            height: 15px;
+            position: absolute;
+        }
+
+        #e40_5 {
+            background-color: rgba(116.00000068545341, 89.00000229477882, 217.0000022649765, 0.20000000298023224);
+            opacity: 1;
+            width: 370px;
+            height: 15px;
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            border-top-left-radius: 100px;
+            border-top-right-radius: 100px;
+            border-bottom-left-radius: 100px;
+            border-bottom-right-radius: 100px;
+        }
+
+        #e40_6 {
+            background-color: rgba(116.00000068545341, 89.00000229477882, 217.0000022649765, 1);
+            opacity: 1;
+            width: 84.50617218017578px;
+            height: 15px;
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            border-top-left-radius: 100px;
+            border-top-right-radius: 100px;
+            border-bottom-left-radius: 100px;
+            border-bottom-right-radius: 100px;
+        }
+    </style>
+</head>
+
+<body id="page-top">
+
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+
+            <!-- Sidebar - Brand -->
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+                <div class="sidebar-brand-icon">
+                    <i class="far fa-keyboard"></i>
+                </div>
+                <div class="sidebar-brand-text mx-3">Steno_Qwerty</div>
+            </a>
+        
+            <!-- Divider -->
+            <hr class="sidebar-divider my-0">
+        
+            <!-- Nav Item - Dashboard -->
+            <li class="nav-item active">
+                <a class="nav-link" href="index.html">
+                    <i class="fas fa-home"></i>
+                    <span>Trang chủ</span></a>
+            </li>
+        
+            <!-- Divider -->
+            <hr class="sidebar-divider">
+        
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="./introduce.html">
+                    <i class="fas fa-book"></i>
+                    <span>Bộ quy tắc</span>
+                </a>
+                <!-- <div id="collapseBoquytac" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Bộ quy tắc:</h6>
+                        <a class="collapse-item" href="#">Âm đầu</a>
+                        <a class="collapse-item" href="#">Âm chính</a>
+                        <a class="collapse-item" href="#">Âm cuối</a>
+                    </div>
+                </div> -->
+            </li>
+        
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="./practice.html">
+                    <i class="fab fa-leanpub"></i>
+                    <span>Học tốc ký</span>
+                </a>
+                <!-- <div id="collapseHoctokky" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Menu:</h6>
+                        <a class="collapse-item" href="./practice.html">Âm đầu</a>
+                        <a class="collapse-item" href="./practice.html">Âm chính</a>
+                        <a class="collapse-item" href="./practice.html">Âm cuối</a>
+                    </div>
+                </div> -->
+            </li>
+        
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="trainning.html" >
+                   <i class="fab fa-leanpub"></i>
+                    <span>Luyện tập</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="game_mario.html">
+                   <i class="fas fa-gamepad"></i>
+                    <span>Trò chơi</span>
+                </a>
+            </li>
+        
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="thachdau.html">
+                    <i class="fas fa-bomb"></i>
+                    <span>Thách đấu</span>
+                </a>
+            </li>
+        
+            <!-- Divider -->
+            <hr class="sidebar-divider">
+        
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="./history.html">
+                    <i class="fas fa-history"></i>
+                    <span>Lịch sử</span>
+                </a>
+            </li>
+        
+            <!-- Sidebar Toggler (Sidebar) -->
+            <div class="text-center d-none d-md-inline">
+                <button class="rounded-circle border-0" id="sidebarToggle"></button>
+            </div>
+        
+        </ul>
+        <!-- End of Sidebar -->
+
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column">
+
+            <!-- Main Content -->
+            <div id="content">
+
+                <!-- Topbar -->
+                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+
+                    <!-- Sidebar Toggle (Topbar) -->
+                    <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+                        <i class="fa fa-bars"></i>
+                    </button>
+
+                    <!-- Topbar Search -->
+                    <form
+                        class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
+                        <div class="input-group">
+                            <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..."
+                                aria-label="Search" aria-describedby="basic-addon2">
+                            <div class="input-group-append">
+                                <button class="btn btn-primary" type="button">
+                                    <i class="fas fa-search fa-sm"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+
+                    <!-- Topbar Navbar -->
+                    <ul class="navbar-nav ml-auto">
+
+                        <!-- Nav Item - Search Dropdown (Visible Only XS) -->
+                        <li class="nav-item dropdown no-arrow d-sm-none">
+                            <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-search fa-fw"></i>
+                            </a>
+                            <!-- Dropdown - Messages -->
+                            <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
+                                aria-labelledby="searchDropdown">
+                                <form class="form-inline mr-auto w-100 navbar-search">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control bg-light border-0 small"
+                                            placeholder="Search for..." aria-label="Search"
+                                            aria-describedby="basic-addon2">
+                                        <div class="input-group-append">
+                                            <button class="btn btn-primary" type="button">
+                                                <i class="fas fa-search fa-sm"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </li>
+
+                        <!-- Nav Item - Alerts -->
+                        <li class="nav-item dropdown no-arrow mx-1">
+                            <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-bell fa-fw"></i>
+                                <!-- Counter - Alerts -->
+                                <span class="badge badge-danger badge-counter">3+</span>
+                            </a>
+                            <!-- Dropdown - Alerts -->
+                            <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                                aria-labelledby="alertsDropdown">
+                                <h6 class="dropdown-header">
+                                    Alerts Center
+                                </h6>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="mr-3">
+                                        <div class="icon-circle bg-primary">
+                                            <i class="fas fa-file-alt text-white"></i>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="small text-gray-500">December 12, 2019</div>
+                                        <span class="font-weight-bold">A new monthly report is ready to download!</span>
+                                    </div>
+                                </a>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="mr-3">
+                                        <div class="icon-circle bg-success">
+                                            <i class="fas fa-donate text-white"></i>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="small text-gray-500">December 7, 2019</div>
+                                        $290.29 has been deposited into your account!
+                                    </div>
+                                </a>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="mr-3">
+                                        <div class="icon-circle bg-warning">
+                                            <i class="fas fa-exclamation-triangle text-white"></i>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="small text-gray-500">December 2, 2019</div>
+                                        Spending Alert: We've noticed unusually high spending for your account.
+                                    </div>
+                                </a>
+                                <a class="dropdown-item text-center small text-gray-500" href="#">Show All Alerts</a>
+                            </div>
+                        </li>
+
+                        <!-- Nav Item - Messages -->
+                        <li class="nav-item dropdown no-arrow mx-1">
+                            <a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-envelope fa-fw"></i>
+                                <!-- Counter - Messages -->
+                                <span class="badge badge-danger badge-counter">7</span>
+                            </a>
+                            <!-- Dropdown - Messages -->
+                            <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                                aria-labelledby="messagesDropdown">
+                                <h6 class="dropdown-header">
+                                    Message Center
+                                </h6>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="dropdown-list-image mr-3">
+                                        <img class="rounded-circle" src="img/undraw_profile_1.svg" alt="">
+                                        <div class="status-indicator bg-success"></div>
+                                    </div>
+                                    <div class="font-weight-bold">
+                                        <div class="text-truncate">Hi there! I am wondering if you can help me with a
+                                            problem I've been having.
+                                        </div>
+                                        <div class="small text-gray-500">Emily Fowler · 58m</div>
+                                    </div>
+                                </a>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="dropdown-list-image mr-3">
+                                        <img class="rounded-circle" src="img/undraw_profile_2.svg" alt="">
+                                        <div class="status-indicator"></div>
+                                    </div>
+                                    <div>
+                                        <div class="text-truncate">I have the photos that you ordered last month, how
+                                            would you like them sent to you?
+                                        </div>
+                                        <div class="small text-gray-500">Jae Chun · 1d</div>
+                                    </div>
+                                </a>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="dropdown-list-image mr-3">
+                                        <img class="rounded-circle" src="img/undraw_profile_3.svg" alt="">
+                                        <div class="status-indicator bg-warning"></div>
+                                    </div>
+                                    <div>
+                                        <div class="text-truncate">Last month's report looks great, I am very happy with
+                                            the progress so far, keep up the good work!
+                                        </div>
+                                        <div class="small text-gray-500">Morgan Alvarez · 2d</div>
+                                    </div>
+                                </a>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="dropdown-list-image mr-3">
+                                        <img class="rounded-circle" src="https://source.unsplash.com/Mv9hjnEUHR4/60x60"
+                                            alt="">
+                                        <div class="status-indicator bg-success"></div>
+                                    </div>
+                                    <div>
+                                        <div class="text-truncate">Am I a good boy? The reason I ask is because someone
+                                            told me that people say this to all dogs, even if they aren't good...
+                                        </div>
+                                        <div class="small text-gray-500">Chicken the Dog · 2w</div>
+                                    </div>
+                                </a>
+                                <a class="dropdown-item text-center small text-gray-500" href="#">Read More Messages</a>
+                            </div>
+                        </li>
+
+                        <div class="topbar-divider d-none d-sm-block"></div>
+
+                        <!-- Nav Item - User Information -->
+                        <li class="nav-item dropdown no-arrow">
+                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Douglas McGee</span>
+                                <img class="img-profile rounded-circle" src="img/undraw_profile.svg">
+                            </a>
+                            <!-- Dropdown - User Information -->
+                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                                aria-labelledby="userDropdown">
+                                <a class="dropdown-item" href="#">
+                                    <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Profile
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                    <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Settings
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                    <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Activity Log
+                                </a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                                    <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Logout
+                                </a>
+                            </div>
+                        </li>
+
+                    </ul>
+
+                </nav>
+                <!-- End of Topbar -->
+
+                <!-- Begin Page Content -->
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                            <div class="border rounded"
+                                style="height: 200px;width: 100%;border-radius: 20px !important;background-image: url(&quot;./img/images/CTA.svg&quot;);padding: 0px;padding-top: 20px;padding-right: 20px;padding-bottom: 20px;padding-left: 30px;">
+                                <div class="row" style="height: 100%;">
+                                    <div class="col-8" style="height: 100%;">
+                                        <h3 style="color: rgb(255,255,255);">CHỦ ĐỀ KẾ TOÁN</h3>
+                                        <p style="color: rgb(255,255,255);">Bạn đang làm rất tốt, hãy tiếp tục cố gắng<br></p>
+                                        <button class="btn btn-primary shadow" type="button"
+                                            style="background-color: rgb(255,255,255);color: #FC8282;border-color: white;margin-top: 20px;"><strong>Bài
+                                                học tiếp theo</strong></button>
+                                    </div>
+                                    <div class="col-4" style="width: 100%;"><img src="./img/images/Group%2014.svg"
+                                            style="width: 100%;height: 170px;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row" style="margin-top: 37px;">
+                        <div class="col">
+                            <div class="border rounded"
+                                style="border-radius: 20px !important;background-color: #F3F6FF;height: auto;background-image: url(&quot;./img/images/Vector.png&quot;);background-size: 50%;background-repeat: space;padding: 30px;">
+                                <div class="row">
+                                    <div class="col d-flex justify-content-center" style="margin-bottom: 38px;">
+                                        <div>
+                                            <h2><strong>Danh sách bài học</strong></h2>
+                                            <p style="text-align: center;color: #46A3C1;font-size: 21px;"><strong>(9 bài)</strong>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-3 offset-5">
+                                        <div class="d-md-flex"
+                                            style="background-image: url(&quot;./img/images/Group%2024.svg&quot;);background-size: contain;background-repeat: no-repeat;background-position: 50%;height: 150px;position: relative;">
+                                            <div
+                                                style="background-image: url(&quot;./img/images/Ellipse%20414.svg&quot;);width: 30px;height: 30px;background-repeat: no-repeat;background-size: contain;margin-left: 73%;margin-top: -8%;">
+                                                <p class="text-center" style="margin: 0;color: rgb(255,255,255);"><strong>1</strong>
+                                                </p>
+                                            </div>
+                                            <p class="text-center"
+                                                style="margin-bottom: 0;position: absolute;left: 42%;bottom: 43%;margin-left: 0;margin-top: 0;color: rgb(255,255,255);font-size: 24px;">
+                                                <strong> <a href="">1/2</a> </strong></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-3 offset-2">
+                                        <div class="d-md-flex"
+                                            style="background-image: url(&quot;./img/images/Group%2024.svg&quot;);background-size: contain;background-repeat: no-repeat;background-position: 50%;height: 150px;position: relative;">
+                                            <div
+                                                style="background-image: url(&quot;./img/images/Ellipse%20414.svg&quot;);width: 30px;height: 30px;background-repeat: no-repeat;background-size: contain;margin-left: 73%;margin-top: -8%;">
+                                                <p class="text-center" style="margin: 0;color: rgb(255,255,255);"><strong>2</strong>
+                                                </p>
+                                            </div>
+                                            <p class="text-center"
+                                                style="margin-bottom: 0;position: absolute;left: 42%;bottom: 43%;margin-left: 0;margin-top: 0;color: rgb(255,255,255);font-size: 24px;">
+                                                <strong> <a href="./training_counter.html">2/4</a></strong></p>
+                                        </div>
+                                    </div>
+                                    <div class="col-3 offset-3">
+                                        <div class="d-md-flex"
+                                            style="background-image: url(&quot;./img/images/Group%2024.svg&quot;);background-size: contain;background-repeat: no-repeat;background-position: 50%;height: 150px;position: relative;">
+                                            <div
+                                                style="background-image: url(&quot;./img/images/Ellipse%20414.svg&quot;);width: 30px;height: 30px;background-repeat: no-repeat;background-size: contain;margin-left: 73%;margin-top: -8%;">
+                                                <p class="text-center" style="margin: 0;color: rgb(255,255,255);"><strong>3</strong>
+                                                </p>
+                                            </div>
+                                            <p class="text-center"
+                                                style="margin-bottom: 0;position: absolute;left: 42%;bottom: 43%;margin-left: 0;margin-top: 0;color: rgb(255,255,255);font-size: 24px;">
+                                                <strong>4/8</strong></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-3 offset-5">
+                                        <div class="d-md-flex"
+                                            style="background-image: url(&quot;./img/images/Group%2024.svg&quot;);background-size: contain;background-repeat: no-repeat;height: 150px;position: relative;background-position: 50%;">
+                                            <div
+                                                style="background-image: url(&quot;./img/images/Ellipse%20414.svg&quot;);width: 30px;height: 30px;background-repeat: no-repeat;background-size: contain;margin-left: 73%;margin-top: -8%;">
+                                                <p class="text-center" style="margin: 0;color: rgb(255,255,255);"><strong>4</strong>
+                                                </p>
+                                            </div>
+                                            <p class="text-center"
+                                                style="margin-bottom: 0;position: absolute;left: 42%;bottom: 43%;transform: );color: rgb(255,255,255);font-size: 24px;">
+                                                <strong>6/12</strong></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-3 offset-2">
+                                        <div class="d-md-flex"
+                                            style="background-image: url(&quot;./img/images/Group%2024.svg&quot;);background-size: contain;background-repeat: no-repeat;background-position: 50%;height: 150px;position: relative;">
+                                            <div
+                                                style="background-image: url(&quot;./img/images/Ellipse%20414.svg&quot;);width: 30px;height: 30px;background-repeat: no-repeat;background-size: contain;margin-left: 73%;margin-top: -8%;">
+                                                <p class="text-center" style="margin: 0;color: rgb(255,255,255);"><strong>5</strong>
+                                                </p>
+                                            </div>
+                                            <p class="text-center"
+                                                style="margin-bottom: 0;position: absolute;left: 42%;bottom: 43%;margin-left: 0;margin-top: 0;color: rgb(255,255,255);font-size: 24px;">
+                                                <strong>1/2</strong></p>
+                                        </div>
+                                    </div>
+                                    <div class="col-3 offset-3">
+                                        <div class="d-md-flex"
+                                            style="background-image: url(&quot;./img/images/Group24abc.svg&quot;);background-size: contain;background-repeat: no-repeat;height: 150px;position: relative;background-position: 50%;">
+                                            <div
+                                                style="background-image: url(&quot;./img/images/Ellipse%20414.png&quot;);width: 30px;height: 30px;background-repeat: no-repeat;background-size: contain;margin-left: 73%;margin-top: -8%;">
+                                                <p class="text-center" style="margin: 0;color: rgb(255,255,255);"><strong>6</strong>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-3 offset-5">
+                                        <div class="d-md-flex"
+                                            style="background-image: url(&quot;./img/images/Group%2024.svg&quot;);background-size: contain;background-repeat: no-repeat;height: 150px;position: relative;background-position: 50%;">
+                                            <div
+                                                style="background-image: url(&quot;./img/images/Ellipse%20414.svg&quot;);width: 30px;height: 30px;background-repeat: no-repeat;background-size: contain;margin-left: 73%;margin-top: -8%;">
+                                                <p class="text-center" style="margin: 0;color: rgb(255,255,255);"><strong>7</strong>
+                                                </p>
+                                            </div>
+                                            <p class="text-center"
+                                                style="margin-bottom: 0;position: absolute;left: 42%;bottom: 43%;transform: );color: rgb(255,255,255);font-size: 24px;">
+                                                <strong>4/8</strong></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-3 offset-2">
+                                        <div class="d-md-flex"
+                                            style="background-image: url(&quot;./img/images/Group%2024.svg&quot;);background-size: contain;background-repeat: no-repeat;background-position: 50%;height: 150px;position: relative;">
+                                            <div
+                                                style="background-image: url(&quot;./img/images/Ellipse%20414.svg&quot;);width: 30px;height: 30px;background-repeat: no-repeat;background-size: contain;margin-left: 73%;margin-top: -8%;">
+                                                <p class="text-center" style="margin: 0;color: rgb(255,255,255);"><strong>8</strong>
+                                                </p>
+                                            </div>
+                                            <p class="text-center"
+                                                style="margin-bottom: 0;position: absolute;left: 42%;bottom: 43%;margin-left: 0;margin-top: 0;color: rgb(255,255,255);font-size: 24px;">
+                                                <strong>5/10</strong></p>
+                                        </div>
+                                    </div>
+                                    <div class="col-3 offset-3">
+                                        <div class="d-md-flex"
+                                            style="background-image: url(&quot;./img/images/Group24abc.svg&quot;);background-size: contain;background-repeat: no-repeat;height: 150px;position: relative;background-position: 50%;">
+                                            <div
+                                                style="background-image: url(&quot;./img/images/Ellipse%20414.png&quot;);width: 30px;height: 30px;background-repeat: no-repeat;background-size: contain;margin-left: 73%;margin-top: -8%;">
+                                                <p class="text-center" style="margin: 0;color: rgb(255,255,255);"><strong>9</strong>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                    <!-- /.container-fluid -->
+                <!-- End of Main Content -->
+
+                <!-- Footer -->
+                <footer class="sticky-footer bg-white">
+
+                </footer>
+                <!-- End of Footer -->
+
+            </div>
+            <!-- End of Content Wrapper -->
+
+        </div>
+        <!-- End of Page Wrapper -->
+
+        <!-- Scroll to Top Button-->
+
+
+        <!-- Logout Modal-->
+
+
+        <!-- Bootstrap core JavaScript-->
+        <script src="vendor/jquery/jquery.min.js"></script>
+        <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+        <!-- Core plugin JavaScript-->
+        <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+        <!-- Custom scripts for all pages-->
+        <script src="js/sb-admin-2.min.js"></script>
+
+        <!-- Page level plugins -->
+        <script src="vendor/chart.js/Chart.min.js"></script>
+
+        <!-- Page level custom scripts -->
+        <script src="js/demo/chart-area-demo.js"></script>
+
+        <!-- Simple keyboard  -->
+        <script src="https://cdn.jsdelivr.net/npm/simple-keyboard@latest/build/index.js"></script>
+        <script src="js/simple_keyboard.js"></script>
+
+</body>
+
+</html>
