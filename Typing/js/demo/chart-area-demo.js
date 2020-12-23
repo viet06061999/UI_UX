@@ -36,7 +36,7 @@ var myLineChart = new Chart(ctx, {
     "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24"
     ],
     datasets: [{
-      label: "WPM:",
+      label: "Tốc độ gõ ",
       lineTension: 0.3,
       backgroundColor: "rgba(78, 115, 223, 0.05)",
       borderColor: "rgba(78, 115, 223, 1)",
@@ -51,13 +51,13 @@ var myLineChart = new Chart(ctx, {
       data: [100, 102, 104, 103, 103, 110, 112, 115, 135, 138, 145, 150,160, 170, 180, 190, 200, 210, 220, 230, 240, 250, 260, 270,],
     },
     {
-          label: "Phút:",
+          label: "Thời gian ",
           lineTension: 0.3,
           backgroundColor: "rgba(51, 255, 255, 0.05)",
-          borderColor: "rgba(0, 200, 0, 1)",
+          borderColor: "rgb(80,220,195,1)",
           pointRadius: 3,
-          pointBackgroundColor:  "rgba(0, 200, 0, 1)",
-          pointBorderColor:  "rgba(0, 200, 0, 1)",
+          pointBackgroundColor:  "rgb(80,220,195,1)",
+          pointBorderColor:  "rrgb(80,220,195,1 )",
           pointHoverRadius: 3,
           pointHoverBackgroundColor: "rgba(78, 115, 223, 1)",
           pointHoverBorderColor: "rgba(78, 115, 223, 1)",
@@ -113,7 +113,7 @@ var myLineChart = new Chart(ctx, {
       }],
     },
     legend: {
-      display: false
+      display: true
     },
     tooltips: {
       backgroundColor: "rgb(255,255,255)",
@@ -132,7 +132,7 @@ var myLineChart = new Chart(ctx, {
       callbacks: {
         label: function(tooltipItem, chart) {
           var datasetLabel = chart.datasets[tooltipItem.datasetIndex].label || '';
-          return datasetLabel + number_format(tooltipItem.yLabel);
+          return datasetLabel+": " + number_format(tooltipItem.yLabel);
         }
       }
     }
