@@ -1,4 +1,4 @@
-const demoContent = ['c','ầ','n ','c','ù ','b','ù ','s','iê','ng ','n','ă','ng '];
+const demoContent = ['cần ','cù ','bù ','siêng ','lăng '];
 var currentIndex = 0;
 var textLeft = document.getElementById("textleft");
 var textRight = document.getElementById("textright");
