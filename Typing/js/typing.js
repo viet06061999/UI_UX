@@ -2,6 +2,8 @@ const demoContent = ['cần ','cù ','bù ','siêng ','lăng '];
 var currentIndex = 0;
 var textLeft = document.getElementById("textleft");
 var textRight = document.getElementById("textright");
+var minutesLabel = document.getElementById("minutes");
+var secondsLabel = document.getElementById("seconds");
 
 
 function getKey (e) {
@@ -70,7 +72,10 @@ document.body.addEventListener('keydown', function (e) {
 
     countKeyPressCrr ++;
     if(normalToSteno(e) != null) {
-        keyPressed.unshift(normalToSteno(e));       
+        
+        keyPressed.push(normalToSteno(e));    
+        console.log(normalToSteno(e));
+        console.log(keyPressed.length);   
     }
 });
 
@@ -94,10 +99,14 @@ document.body.addEventListener('keyup', function (e) {
             textTemp = textTemp + keyPressed[i];
         }
         console.log(textTemp);
-        textRight.innerHTML = "    " + textTemp + "\n" + textRight.innerHTML;
-        textLeft.innerHTML = textLeft.innerHTML + demoContent[currentIndex];
-        currentIndex++;
-        if(currentIndex==demoContent.length) currentIndex=0;
+        if(textTemp.length != 0) {
+            textRight.innerHTML = " " + minutesLabel.innerHTML + " : " + secondsLabel.innerHTML + '    -    ' + textTemp + "\n" + textRight.innerHTML;
+            textLeft.innerHTML = textLeft.innerHTML + demoContent[currentIndex];
+            currentIndex++;
+            if(currentIndex==demoContent.length) currentIndex=0;
+        }
+        
+        
         let keyPrLg = keyPressed.length;
         for(let i=0 ; i<keyPrLg ; i++) {
             keyPressed.pop();

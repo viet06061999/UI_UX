@@ -3,6 +3,10 @@
     max-width: 960px;
     max-height: 712px;
 }
+#videoDiv {
+    width: 960px;
+    height: 712px;
+}
 
 .play {
     width: 960px;
