@@ -5,14 +5,25 @@ span{
 
 a{
     text-decoration: none;
-	color: grey;	
+	color: white;	
 }
 
 a:hover{
     text-decoration: none;
-	color: grey;	
+	color: white;	
 }
 
+#practiceCategory{
+	color: rgba(70.00000342726707, 163.00000548362732, 193.00000369548798, 1) !important;
+}
+
+#practiceSylabel{
+	color: grey !important;
+}
+
+#currentLesson{
+	color: #46A3C1
+}
 #e7_12 { 
 	overflow:hidden;
 	opacity:1;
@@ -29,18 +40,15 @@ a:hover{
 	top:473px;
 }
 #e14_146 { 
-        box-shadow: rgba(0, 0, 0, 0.25) 0px 5px 5px;
-	background-color:rgba(243.00000071525574, 246.0000005364418, 255, 1);
+    box-shadow: 0 .15rem 1.75rem 0 rgba(58,59,69,.15)!important;
+	background-color:#FFF;
 	opacity:1;
 	width:431px;
 	height:480px;
 	position:absolute;
 	left:0px;
 	top:0px;
-	border-top-left-radius:21px;
-	border-top-right-radius:21px;
-	border-bottom-left-radius:21px;
-	border-bottom-right-radius:21px;
+	border-radius: 10px;
 }
 #e14_151 { 
 	color:rgba(0, 0, 0, 1);
@@ -1135,18 +1143,15 @@ a:hover{
 	top:986px;
 }
 #e14_6185 { 
-        box-shadow: rgba(0, 0, 0, 0.25) 0px 5px 5px;
-	background-color:rgba(243.00000071525574, 246.0000005364418, 255, 1);
+    box-shadow: 0 .15rem 1.75rem 0 rgba(58,59,69,.15)!important;
+	background-color:#FFF;
 	opacity:1;
 	width:434px;
 	height:527px;
 	position:absolute;
 	left:0px;
 	top:0px;
-	border-top-left-radius:21px;
-	border-top-right-radius:21px;
-	border-bottom-left-radius:21px;
-	border-bottom-right-radius:21px;
+	border-radius: 10px;
 }
 #e94_192 { 
 	opacity:1;
@@ -1473,18 +1478,15 @@ a:hover{
 	top:473px;
 }
 #e14_29 { 
-        box-shadow: rgba(0, 0, 0, 0.25) 0px 5px 5px;
-	background-color:rgba(243.00000071525574, 246.0000005364418, 255, 1);
+    box-shadow: 0 .15rem 1.75rem 0 rgba(58,59,69,.15)!important;
+	background-color:#FFF;
 	opacity:1;
 	width:832px;
 	height:1224px;
 	position:absolute;
 	left:0px;
 	top:0px;
-	border-top-left-radius:21px;
-	border-top-right-radius:21px;
-	border-bottom-left-radius:21px;
-	border-bottom-right-radius:21px;
+	border-radius: 10px
 }
 #e90_2 { 
 	opacity:1;
@@ -1495,20 +1497,23 @@ a:hover{
 	top:284px;
 }
 #e14_81 { 
-	background-color:rgba(251.8125182390213, 130.10313391685486, 130.10313391685486, 1);
 	opacity:1;
 	width:740px;
 	height:274.89703369140625px;
 	position:absolute;
 	left:0px;
 	top:7px;
-	border-top-left-radius:32px;
-	border-top-right-radius:32px;
-	border-bottom-left-radius:32px;
-	border-bottom-right-radius:32px;
+	border-radius: 10px;
+	border-left: 0.5rem solid rgba(251.8125182390213, 130.10313391685486, 130.10313391685486, 1);
+	box-shadow: 0 .15rem 1.75rem 0 rgba(58,59,69,.15)!important;
+	background-color: #F8F9FC;
+}
+
+#e14_81 span{
+	color: rgb(102, 102, 102) !important;
 }
 #e14_97 { 
-	color:rgba(255, 255, 255, 1);
+	color:rgb(102, 102, 102);
 	opacity:1;
 	width:161px;
 	height:55px;
@@ -1521,8 +1526,12 @@ a:hover{
 	letter-spacing:0;
 	line-height:54px;
 }
+
+#e14_97 a{
+	color: rgb(102, 102, 102);
+}
 #e14_98 { 
-	color:rgba(240.12499898672104, 240.12499898672104, 240.12499898672104, 1);
+	color:rgb(102, 102, 102);
 	opacity:1;
 	width:243px;
 	height:47px;
@@ -1536,7 +1545,7 @@ a:hover{
 	line-height:33px;
 }
 #e14_101 { 
-	color:rgba(255, 255, 255, 1);
+	color:rgb(102, 102, 102);
 	opacity:1;
 	width:159px;
 	height:34px;
@@ -1550,7 +1559,7 @@ a:hover{
 	line-height:33px;
 }
 #e14_137 { 
-	background-color:rgba(255, 255, 255, 1);
+	background-color:rgb(194, 194, 194);
 	opacity:1;
 	width:93px;
 	height:86px;
@@ -1593,7 +1602,7 @@ a:hover{
 	top:23px;
 }
 #ei90_1_14_91 { 
-	color:rgba(255, 255, 255, 1);
+	color:rgb(102, 102, 102);
 	opacity:1;
 	width:41px;
 	height:34px;
@@ -1607,7 +1616,7 @@ a:hover{
 	line-height:34px;
 }
 #ei90_1_14_92 { 
-	color:rgba(255, 255, 255, 1);
+	color: rgb(102, 102, 102);
 	opacity:1;
 	width:43px;
 	height:28px;
@@ -1634,7 +1643,7 @@ a:hover{
 	border-bottom-right-radius:6px;
 }
 #ei90_1_14_94 { 
-	background-color:rgba(255, 255, 255, 1);
+	background-color:rgb(102, 102, 102);
 	opacity:1;
 	width:138.0531005859375px;
 	height:11.5px;
@@ -1651,10 +1660,10 @@ a:hover{
 	width:184px;
 	height:184px;
 	position:absolute;
-    top: 30px;
-    left: 30px;
+	top:-11.012447357177734px;
 	background-image:url(../img/images/test.svg);
 	background-repeat:no-repeat;
+	background-size:cover;
 }
 #e94_59 { 
 	opacity:1;
@@ -1701,20 +1710,19 @@ a:hover{
 	top:906px;
 }
 #e94_45 { 
-	background-color:rgba(255, 198.89999270439148, 0, 1);
+	background-color:#F8F9FC;
 	opacity:1;
 	width:740px;
 	height:274.89703369140625px;
 	position:absolute;
 	left:0px;
 	top:7px;
-	border-top-left-radius:32px;
-	border-top-right-radius:32px;
-	border-bottom-left-radius:32px;
-	border-bottom-right-radius:32px;
+	border-radius: 10px;
+	box-shadow: 0 .15rem 1.75rem 0 rgba(58,59,69,.15)!important;
+	border-left: 0.5rem solid yellow;
 }
 #e94_46 { 
-	color:rgba(255, 255, 255, 1);
+	color:rgba(102, 102, 102, 1);
 	opacity:1;
 	width:161px;
 	height:55px;
@@ -1728,7 +1736,7 @@ a:hover{
 	line-height:54px;
 }
 #e94_47 { 
-	color:rgba(240.12499898672104, 240.12499898672104, 240.12499898672104, 1);
+	color:rgba(102, 102, 102, 1);	
 	opacity:1;
 	width:243px;
 	height:47px;
@@ -1742,7 +1750,7 @@ a:hover{
 	line-height:33px;
 }
 #e94_48 { 
-	color:rgba(255, 255, 255, 1);
+	color:rgba(102, 102, 102, 1);
 	opacity:1;
 	width:159px;
 	height:34px;
@@ -1756,7 +1764,7 @@ a:hover{
 	line-height:33px;
 }
 #e94_49 { 
-	background-color:rgba(255, 255, 255, 1);
+	background-color:rgb(180, 180, 180);
 	opacity:1;
 	width:93px;
 	height:86px;
@@ -1799,7 +1807,7 @@ a:hover{
 	top:23px;
 }
 #ei94_51_14_91 { 
-	color:rgba(255, 255, 255, 1);
+	color:rgba(102, 102, 102, 1);
 	opacity:1;
 	width:41px;
 	height:34px;
@@ -1813,7 +1821,7 @@ a:hover{
 	line-height:34px;
 }
 #ei94_51_14_92 { 
-	color:rgba(255, 255, 255, 1);
+	color:rgba(102, 102, 102, 1);
 	opacity:1;
 	width:43px;
 	height:28px;
@@ -1840,7 +1848,7 @@ a:hover{
 	border-bottom-right-radius:6px;
 }
 #ei94_51_14_94 { 
-	background-color:rgba(255, 255, 255, 1);
+	background-color: rgba(102, 102, 102, 1);
 	opacity:1;
 	width:138.0531005859375px;
 	height:11.5px;
@@ -1859,10 +1867,10 @@ a:hover{
 	height:170px;
 	position:absolute;
 	left:0px;
-    top: 30px;
-    left: 30px;
-	background-image:url(../img/images/desktop.svg);
+	top:41.60452651977539px;
+	background-image:url(../img/images/esaly_1.png);
 	background-repeat:no-repeat;
+	background-size:cover;
 }
 #e94_29 { 
 	opacity:1;
@@ -1873,20 +1881,19 @@ a:hover{
 	top:595px;
 }
 #e94_16 { 
-	background-color:rgba(207.00000286102295, 117.00000062584877, 255, 1);
+	background-color: #F8F9FC;
 	opacity:1;
 	width:740px;
 	height:274.89703369140625px;
 	position:absolute;
 	left:0px;
 	top:7px;
-	border-top-left-radius:32px;
-	border-top-right-radius:32px;
-	border-bottom-left-radius:32px;
-	border-bottom-right-radius:32px;
+	border-left: 0.5rem solid purple;
+	border-radius: 10px;
+	box-shadow:0 .15rem 1.75rem 0 rgba(58,59,69,.15)!important ;
 }
 #e94_17 { 
-	color:rgba(255, 255, 255, 1);
+	color: rgb(102, 102, 102);
 	opacity:1;
 	width:161px;
 	height:55px;
@@ -1900,7 +1907,7 @@ a:hover{
 	line-height:54px;
 }
 #e94_18 { 
-	color:rgba(240.12499898672104, 240.12499898672104, 240.12499898672104, 1);
+	color:rgb(102, 102, 102);
 	opacity:1;
 	width:243px;
 	height:47px;
@@ -1914,7 +1921,7 @@ a:hover{
 	line-height:33px;
 }
 #e94_19 { 
-	color:rgba(255, 255, 255, 1);
+	color:rgba(102, 102, 102);
 	opacity:1;
 	width:159px;
 	height:34px;
@@ -1928,7 +1935,7 @@ a:hover{
 	line-height:33px;
 }
 #e94_20 { 
-	background-color:rgba(255, 255, 255, 1);
+	background-color:rgb(189, 189, 189);
 	opacity:1;
 	width:93px;
 	height:86px;
@@ -1971,7 +1978,7 @@ a:hover{
 	top:23px;
 }
 #ei94_22_14_91 { 
-	color:rgba(255, 255, 255, 1);
+	color:rgb(102, 102, 102);
 	opacity:1;
 	width:41px;
 	height:34px;
@@ -1985,7 +1992,7 @@ a:hover{
 	line-height:34px;
 }
 #ei94_22_14_92 { 
-	color:rgba(255, 255, 255, 1);
+	color:rgb(102, 102, 102);
 	opacity:1;
 	width:43px;
 	height:28px;
@@ -2012,7 +2019,7 @@ a:hover{
 	border-bottom-right-radius:6px;
 }
 #ei94_22_14_94 { 
-	background-color:rgba(255, 255, 255, 1);
+	background-color: rgb(102, 102, 102);
 	opacity:1;
 	width:138.0531005859375px;
 	height:11.5px;
@@ -2029,10 +2036,10 @@ a:hover{
 	width:160px;
 	height:160px;
 	position:absolute;
-    top: 30px;
-    left: 30px;
-	background-image:url(../img/images/Union.svg);
+	top:-2.8211629390716553px;
+	background-image:url(../img/images/esaly_5.png);
 	background-repeat:no-repeat;
+	background-size:cover;
 }
 #e94_188 { 
 	opacity:1;
@@ -2043,7 +2050,7 @@ a:hover{
 	top:195px;
 }
 #e72_283 { 
-    color:rgba(116.95468425750732, 122.64437735080719, 126.43750101327896, 1);
+	color:grey;
 	opacity:1;
 	width:308px;
 	height:95px;
@@ -2064,7 +2071,6 @@ a:hover{
 	position:absolute;
 	left:332px;
 	top:0px;
-	
 	text-align:left;
 	font-size:30px;
 	letter-spacing:0;
@@ -2105,12 +2111,13 @@ a:hover{
 	width:245px;
 	height:11px;
 	position:absolute;
-	left:330px;
+	left:0px;
 	top:0px;
 	border-top-left-radius:40px;
 	border-top-right-radius:40px;
 	border-bottom-left-radius:40px;
 	border-bottom-right-radius:40px;
+	margin-left: 330px
 }
 #e72_289 { 
 	background-color:rgba(255, 255, 255, 1);
@@ -2156,17 +2163,21 @@ a:hover{
 }
 #e12_19 { 
 	overflow:hidden;
-	background-image:url(../img/images/CTA.png);
+	/* background-image:url(../img/images/CTA.png); */
 	opacity:1;
 	width:1302px;
 	height:320px;
 	position:absolute;
 	left:0px;
 	top:0px;
-	border-top-left-radius:16px;
-	border-top-right-radius:16px;
-	border-bottom-left-radius:16px;
-	border-bottom-right-radius:16px;
+	border-radius: 10px;
+	background-color: #FFF;
+	box-shadow: 0 .15rem 1.75rem 0 rgba(58,59,69,.15)!important;
+	border-left: .25rem solid #36b9cc!important;
+}
+
+#e12_19 span {
+	color: rgb(102, 102, 102);
 }
 #e14_26 { 
 	opacity:1;
@@ -2204,7 +2215,7 @@ a:hover{
 	top:0px;
 }
 #e14_11 { 
-	color:rgba(255, 255, 255, 1);
+	color:rgb(102, 102, 102);
 	opacity:1;
 	width:118px;
 	height:51px;
@@ -2218,7 +2229,7 @@ a:hover{
 	line-height:54px;
 }
 #e14_13 { 
-	color:rgba(255, 255, 255, 1);
+	color:rgb(102, 102, 102);
 	opacity:1;
 	width:103px;
 	height:54px;
@@ -2248,7 +2259,7 @@ a:hover{
 	top:0px;
 }
 #e12_59 { 
-	color:rgba(255, 255, 255, 1);
+	color:rgb(102, 102, 102);
 	opacity:1;
 	width:445px;
 	height:54px;
@@ -2262,7 +2273,7 @@ a:hover{
 	line-height:54px;
 }
 #e14_15 { 
-	color:rgba(255, 255, 255, 1);
+	color:rgb(102, 102, 102);
 	opacity:1;
 	width:536px;
 	height:56.53632736206055px;
@@ -2276,8 +2287,8 @@ a:hover{
 	line-height:54px;
 }
 #e14_21 { 
-	box-shadow:0px 4px 4px rgba(0, 0, 0, 0.25);
-	background-color:rgba(255, 255, 255, 1);
+	box-shadow:0 .15rem 1.75rem 0 rgba(58,59,69,.15)!important;
+	background-color:rgb(226, 226, 226);
 	opacity:1;
 	width:239.99993896484375px;
 	height:95.17892456054688px;
