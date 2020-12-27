@@ -8,6 +8,10 @@
     height: 712px;
 }
 
+#myVideo {
+    position: relative;
+}
+
 .play {
     width: 960px;
     height: 712px;

@@ -187,7 +187,7 @@ $(document).ready(function () {
                 video.setAttribute("muted", "");
                 video.setAttribute("loop", "");
                 video.setAttribute("style", "border-radius: 5%;");
-                video.setAttribute("id", "initVideo");
+                video.setAttribute("id", "myVideo");
                 videoDiv.appendChild(video);
 
                 var source = document.createElement("source");
@@ -364,7 +364,18 @@ $(document).ready(function () {
                 isMistake = true;
                 if(countVideo>1) {
                     var videoDiv = document.getElementById("videoDiv");
-                    videoDiv.innerHTML = "";
+                    let j=0;
+                    while(videoDiv.childNodes.length != j) {
+                        if(videoDiv.childNodes[j].tagName != 'VIDEO') {
+                            videoDiv.removeChild(videoDiv.childNodes[j]);
+                        } else {
+                            j++;
+                        }
+                    }
+
+                    var oldVideo = document.getElementById('myVideo');
+                    oldVideo.removeAttribute('id');
+                    oldVideo.setAttribute('style','position: absolute;top:-1;border-radius: 5%;');
     
                     var video = document.createElement("video");
                     video.setAttribute("autoplay", "");
@@ -377,6 +388,10 @@ $(document).ready(function () {
                     source.setAttribute("src", "game/video/fail_" + (countVideo - 1) + ".mp4");
                     source.setAttribute("type", "video/mp4");
                     video.appendChild(source);
+
+                    if(videoDiv.childNodes.length>2) {
+                        videoDiv.removeChild(videoDiv.childNodes[0]);
+                    }
                 }
 
                 
@@ -416,7 +431,18 @@ $(document).ready(function () {
                 }, 400);
 
                 var videoDiv = document.getElementById("videoDiv");
-                videoDiv.innerHTML = "";
+                let j=0;
+                while(videoDiv.childNodes.length != j) {
+                    if(videoDiv.childNodes[j].tagName != 'VIDEO') {
+                        videoDiv.removeChild(videoDiv.childNodes[j]);
+                    } else {
+                        j++;
+                    }
+                }
+
+                var oldVideo = document.getElementById('myVideo');
+                oldVideo.removeAttribute('id');
+                oldVideo.setAttribute('style','position: absolute;top:-1;border-radius: 5%;');
 
                 var video = document.createElement("video");
                 video.setAttribute("autoplay", "");
@@ -429,6 +455,10 @@ $(document).ready(function () {
                 source.setAttribute("src", "game/video/pass_" + countVideo + ".mp4");
                 source.setAttribute("type", "video/mp4");
                 video.appendChild(source);
+
+                if(videoDiv.childNodes.length>2) {
+                    videoDiv.removeChild(videoDiv.childNodes[0]);
+                }
 
                 if (countVideo < 4) {
                     countVideo++;

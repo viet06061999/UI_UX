@@ -38,6 +38,10 @@ h1 {
       font-size: 14px;
       font-family: sans-serif;
   }
+
+  .keyboard .keyboard__row .subkey {
+      background-color:#737171;
+  }
   
   .keyboard__row {
       display: inline-block;
@@ -101,6 +105,10 @@ h1 {
   .key--w6 {
       width: 8.3em;
   }
+
+  .key--w7 {
+    width: 93px;
+}
   
   .key--space {
       width: 18em;
