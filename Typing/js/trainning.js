@@ -1,6 +1,6 @@
-const firstDictionary = [['B','P',''],['CH','K',''],['D','S','P'],['CH','S','K'],['G','K','P'],['L','S','R'],['M','R','H'],['NH','P','R'],['GI','S','H'],['GH','K','P']];
-const mainDictionary = [['A','A',''],['A','A',''],['ƯƠ','E','W'],['I','K','R'],['A','A','P'],['OA','U','R'],['I','R','H'],['U','P','R'],['A','S','H'],['E','K','P']];
-const lastDictionary = [['M','T',''],['N','N',''],['NG','N','A'],['NH','N','I'],['N','N','P'],['N','N','R'],['N','R','H'],['NG','P','R'],['N','S','H'],['P','K','P']];
+const firstDictionary = [['C','K',''],['B','P',''],['D','S','P'],['CH','S','P'],['G','K','P'],['L','S','R'],['M','S','K'],['NH','S','K'],['GI','S','K'],['GH','K','S']];
+const mainDictionary = [['O','O',''],['Ơ','W',''],['ƯƠ','E','W'],['IỀ','I','E'],['A','O','U'],['OA','H','W'],['I','H','I'],['U','H','I'],['A','H','I'],['E','H','I']];
+const lastDictionary = [['N','N',''],['I','J',''],['NG','N','I'],['U','J','K'],['N','J','T'],['N','J','T'],['N','Y','J'],['NG','Y','J'],['N','Y','J'],['P','Y','J']];
 var currentIndex = 0;
 var currentWord = document.getElementById('practiceWord');
 currentWord.innerHTML = firstDictionary[currentIndex][0]+mainDictionary[currentIndex][0]+lastDictionary[currentIndex][0];
