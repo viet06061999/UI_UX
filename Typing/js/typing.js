@@ -4,6 +4,7 @@ var textLeft = document.getElementById("textleft");
 var textRight = document.getElementById("textright");
 var minutesLabel = document.getElementById("minutes");
 var secondsLabel = document.getElementById("seconds");
+var countWord = 0;
 
 
 function getKey (e) {
@@ -73,9 +74,7 @@ document.body.addEventListener('keydown', function (e) {
     countKeyPressCrr ++;
     if(normalToSteno(e) != null) {
         
-        keyPressed.push(normalToSteno(e));    
-        console.log(normalToSteno(e));
-        console.log(keyPressed.length);   
+        keyPressed.push(normalToSteno(e)); 
     }
 });
 
@@ -98,12 +97,18 @@ document.body.addEventListener('keyup', function (e) {
         for(let i=0 ; i<keyPressed.length ; i++) {
             textTemp = textTemp + keyPressed[i];
         }
-        console.log(textTemp);
         if(textTemp.length != 0) {
             textRight.innerHTML = " " + minutesLabel.innerHTML + " : " + secondsLabel.innerHTML + '    -    ' + textTemp + "\n" + textRight.innerHTML;
             textLeft.innerHTML = textLeft.innerHTML + demoContent[currentIndex];
             currentIndex++;
             if(currentIndex==demoContent.length) currentIndex=0;
+            
+            if(countWord==0) {
+                document.getElementById('percentage').innerHTML = '100%';
+            }
+            countWord++;
+            var timeTmp = (minutesLabel.innerHTML + (secondsLabel.innerHTML))/30 + 0.1;
+            document.getElementById('speed').innerHTML = Math.ceil(countWord/timeTmp) + ' từ/phút';
         }
         
         

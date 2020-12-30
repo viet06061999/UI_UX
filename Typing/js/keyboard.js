@@ -23,7 +23,7 @@ function changeBar() {
                 let divResultModal = document.createElement('div');
                 divResultModal.setAttribute('style', 'color: #466ddc; font-size: 29px;font-weight: 600;')
                 divResultModal.setAttribute('class', 'text-center');
-                divResultModal.innerHTML = 'Kết quả : ' + resultModal + '/10';
+                divResultModal.innerHTML = 'Kết quả : ' + resultModal + '/10 điểm \<br\/> Tốc độ : 45 từ/phút ';
                 document.getElementById('resultModal').appendChild(divResultModal);
                 document.getElementById('openModal').click();
             }, 500);
