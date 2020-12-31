@@ -1,10 +1,25 @@
-const demoContent =  ['xin ','chào ','đây ','là ','nhóm ','HCI ','17 \n','cần ','cù ','bù ','siêng ','lăng\n'];
+CKEDITOR.replace('textleft', {
+    on: {
+      instanceReady: function (evt) {
+          evt.editor.document.getBody().setStyles({color: 'black', 'font-size': '24px'})
+      }
+    },
+    width: "735px",
+    height:"185px"
+});
+CKEDITOR.config.autoParagraph = false;
+
+const demoContent =  ['xin ','chào ','đây ','là ','nhóm ','HCI ','17 ',',cần ','cù ','bù ','siêng ','lăng',','];
+const demoSteno =    ['ST*-IN', 'SK-HAJK', 'TP*-WJN', 'SR-HA', 'TK-SOT', 'HKI', '#S-#-W','K-H*WN','K-HIU','P-HIU', 'S-IEG', 'SR*-AG','-GT']
 var currentIndex = 0;
 var textLeft = document.getElementById("textleft");
 var textRight = document.getElementById("textright");
 var minutesLabel = document.getElementById("minutes");
 var secondsLabel = document.getElementById("seconds");
 var countWord = 0;
+
+
+
 
 
 function getKey (e) {
@@ -98,8 +113,10 @@ document.body.addEventListener('keyup', function (e) {
             textTemp = textTemp + keyPressed[i];
         }
         if(textTemp.length != 0) {
-            textRight.innerHTML = " " + minutesLabel.innerHTML + " : " + secondsLabel.innerHTML + '    -    ' + textTemp + "\n" + textRight.innerHTML;
-            textLeft.innerHTML = textLeft.innerHTML + demoContent[currentIndex];
+            // textRight.innerHTML = " " + minutesLabel.innerHTML + " : " + secondsLabel.innerHTML + '    -    ' + textTemp + "\n" + textRight.innerHTML;
+            textRight.innerHTML = " " + minutesLabel.innerHTML + " : " + secondsLabel.innerHTML + '    -    ' + demoSteno[currentIndex] + "\n" + textRight.innerHTML;
+            let content = '<h1>' + CKEDITOR.instances.textleft.getData().slice(4,-6) + ' ' + demoContent[currentIndex] + '</h1>';
+            CKEDITOR.instances['textleft'].setData(content);
             currentIndex++;
             if(currentIndex==demoContent.length) currentIndex=0;
             
